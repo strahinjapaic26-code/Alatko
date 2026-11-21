@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101d37">
+<meta name="description" content="ALATKO – besplatni alati: profesionalni CV sa fotografijom, QR kod, kompresija slika, tekst, kalkulatori i još mnogo toga.">
+<title>ALATKO — Tvoji online alati i CV studio</title>
+<style>
+:root{--navy:#101d37;--navy2:#192a4c;--ink:#17243a;--muted:#67758b;--line:#e7ebf3;--bg:#f6f8fc;--white:#fff;--blue:#586dff;--aqua:#60d6cd;--shadow:0 16px 50px rgba(23,40,78,.07)}
+*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #9cb5ff;outline-offset:2px}a{color:inherit;text-decoration:none}h1,h2,h3,p{margin-top:0}[hidden]{display:none!important}
+.topbar{height:74px;background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:0 34px;gap:14px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:23px;letter-spacing:-.9px;white-space:nowrap}.brand-symbol{display:grid;place-items:center;width:40px;height:40px;background:linear-gradient(130deg,#6878ff,#48b9e6);color:#fff;border-radius:13px;font-weight:950;box-shadow:0 7px 19px #637dff4c}.brand span:last-child{color:#111c36}.top-center{display:flex;align-items:center;gap:7px}.top-link{font-size:13px;color:#59677e;padding:10px 12px;border-radius:10px;font-weight:700;border:0;background:transparent}.top-link:hover,.top-link.active{color:#3d53c8;background:#eff1ff}.top-actions{display:flex;gap:8px;align-items:center}.button{background:#fff;color:#1a2b49;border:1px solid #dfe5f0;border-radius:11px;padding:11px 15px;font-size:13px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.16s;white-space:nowrap}.button:hover{transform:translateY(-1px);border-color:#aebaf6}.button.primary{background:#596cff;color:#fff;border-color:#596cff;box-shadow:0 7px 18px #596cff22}.button.primary:hover{background:#4359ea}.button.dark{background:#152341;border-color:#152341;color:white}.button.tiny{padding:8px 11px;font-size:12px}.button.danger{color:#bb4252;border-color:#ffccce}.icon-btn{background:#fff;border:1px solid var(--line);width:39px;height:39px;display:grid;place-items:center;border-radius:11px;font-size:17px}
+.shell{display:grid;grid-template-columns:241px minmax(0,1fr);min-height:calc(100vh - 74px)}.sidebar{background:#fff;border-right:1px solid var(--line);padding:25px 14px 25px 18px;position:sticky;top:74px;height:calc(100vh - 74px);overflow:auto}.menu-group{margin-bottom:23px}.menu-title{color:#9aa6b9;text-transform:uppercase;font-size:10px;font-weight:900;letter-spacing:1.15px;padding:7px 13px;margin-bottom:5px}.side-link{width:100%;border:0;text-align:left;display:flex;align-items:center;gap:11px;border-radius:11px;background:transparent;padding:11px 13px;color:#617087;font-size:13px;font-weight:700;margin:2px 0}.side-link .emoji{font-size:17px;width:23px;text-align:center}.side-link:hover,.side-link.active{color:#465be6;background:#eef1ff}.side-link.active{box-shadow:inset 3px 0 #586dff}.side-note{background:#f5f6ff;border:1px solid #eaedff;border-radius:15px;padding:14px;margin:17px 6px;font-size:12px;color:#687898}.side-note b{color:#263e75;display:block;margin-bottom:4px}
+.main{padding:30px clamp(20px,4vw,58px) 65px;min-width:0;max-width:1620px;width:100%;margin:0 auto}.breadcrumbs{font-size:12px;color:#9ca8b9;margin-bottom:18px;font-weight:700}.breadcrumbs span{color:#6274db}.page{animation:show .2s ease both}@keyframes show{from{opacity:.35;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}.hero{border-radius:23px;background:radial-gradient(circle at 85% 35%,#3a4f8a 0,transparent 44%),linear-gradient(120deg,#182847,#0b1c35);color:#fff;padding:39px 45px;display:grid;grid-template-columns:1fr 340px;min-height:330px;align-items:center;position:relative;overflow:hidden;gap:25px}.hero:after{content:"";width:270px;height:270px;border-radius:50%;border:1px solid #ffffff20;position:absolute;right:-70px;top:-120px}.eyebrow{font-size:11px;letter-spacing:1.15px;font-weight:850;color:#90e4d8;text-transform:uppercase;margin-bottom:15px}.hero h1{font-size:clamp(30px,4vw,48px);letter-spacing:-1.65px;line-height:1.14;margin-bottom:16px;max-width:620px}.hero h1 em{font-style:normal;color:#8fdedc}.hero p{color:#c3d0e7;font-size:14px;max-width:580px;margin-bottom:23px}.hero .button{box-shadow:none}.hero-art{position:relative;height:260px;display:grid;place-items:center}.art-paper{height:245px;width:188px;display:grid;grid-template-columns:64px 1fr;background:#fff;transform:rotate(7deg);border-radius:9px;box-shadow:0 20px 40px #0004;overflow:hidden;position:relative;z-index:1}.art-dark{background:#283549;padding:12px 9px}.art-photo{border-radius:50%;width:43px;height:43px;background:linear-gradient(130deg,#7bd2d6,#deeff9);margin:4px auto 16px}.art-dark i,.art-white i{height:5px;border-radius:6px;display:block;margin:7px 0;background:#f5f8ff47}.art-white{padding:21px 12px}.art-white i{background:#dbe2ed}.art-white b{display:block;width:70%;height:9px;background:#273754;border-radius:4px;margin-bottom:13px}.art-dots{position:absolute;width:200px;height:200px;border-radius:50%;border:35px solid #6578ff44;right:14px;top:25px}.hero-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:23px}.hero-chips span{font-size:11px;padding:6px 9px;border:1px solid #ffffff2e;border-radius:25px;color:#dfebff}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin:34px 0 19px}.section-head h2{font-size:25px;letter-spacing:-.85px;margin-bottom:3px}.section-head p{font-size:13px;color:var(--muted);margin:0}.searchbar{position:relative;width:min(380px,100%)}.searchbar input{width:100%;background:white;border:1px solid var(--line);border-radius:13px;padding:12px 13px 12px 41px;color:#20334f;outline:none}.searchbar:before{content:"⌕";position:absolute;top:6px;left:14px;color:#8190a6;font-size:25px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.chip{border:1px solid #e5e9f4;background:white;padding:9px 13px;border-radius:30px;color:#6d7b91;font-weight:750;font-size:12px}.chip.active,.chip:hover{color:#4055dc;background:#eef0ff;border-color:#cbd2ff}.tool-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.tool-card{background:#fff;text-align:left;border:1px solid var(--line);border-radius:17px;padding:20px;min-height:188px;transition:.2s;box-shadow:0 4px 18px #1a2d5510}.tool-card:hover{border-color:#aab8fa;transform:translateY(-4px);box-shadow:0 15px 40px #2e42821a}.tool-icon{width:49px;height:49px;border-radius:15px;background:#ecf0ff;font-size:24px;display:grid;place-items:center;margin-bottom:15px}.tool-card h3{font-size:15px;margin:0 0 7px;letter-spacing:-.25px}.tool-card p{font-size:12px;color:var(--muted);line-height:1.55;margin:0}.card-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:11px;color:#98a5bb}.card-foot b{font-size:17px;color:#596cff}.tag{font-size:10px;font-weight:850;color:#455fe0;background:#edf0ff;border-radius:6px;padding:4px 6px}
+.page-heading{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:22px}.page-heading h1{font-size:31px;letter-spacing:-1.1px;margin:0 0 4px}.page-heading p{font-size:13px;color:var(--muted);margin:0}.surface{background:white;border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow)}.surface.pad{padding:26px}.surface h3{font-size:17px;letter-spacing:-.4px;margin:0 0 18px}.note{font-size:12px;color:#71819b;line-height:1.6}.eyeline{background:#f0f4ff;color:#5667aa;font-size:12px;padding:11px 13px;border-radius:12px;margin-bottom:18px}.split{display:grid;grid-template-columns:1fr 1fr;gap:21px}.field{display:block;margin-bottom:14px;min-width:0}.field label{display:block;font-size:12px;font-weight:800;color:#3c4a61;margin:0 0 7px}.field input,.field textarea,.field select,select.base,input.base{display:block;width:100%;border:1px solid #dde4ef;border-radius:10px;padding:11px 12px;background:#fff;color:#1d2b43;outline:none;font-size:13px}.field input:focus,.field textarea:focus,.field select:focus{border-color:#7f8dff;box-shadow:0 0 0 3px #6579ff15}.field textarea{resize:vertical;min-height:92px}.form-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.result{margin-top:18px;border-radius:13px;background:#f1f4ff;border:1px solid #dce4ff;padding:18px;overflow-wrap:anywhere}.result strong{font-size:25px;letter-spacing:-.5px;display:block;color:#273e8d}.result small{color:#7989b1}.result p{font-size:12px;color:#667998;margin:6px 0 0}.empty-state{padding:40px 20px;text-align:center;border:1px dashed #cfd6e6;border-radius:14px;color:#8291a9}.muted{color:var(--muted)}
+/* CV studio */
+.cv-toolbar{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.cv-layout{display:grid;grid-template-columns:minmax(310px,395px) minmax(0,1fr);gap:21px;align-items:start}.cv-editor{max-height:calc(100vh - 110px);overflow:auto;position:sticky;top:94px}.editor-head{padding:21px 22px 13px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.editor-head h2{font-size:19px;margin:0}.editor-inner{padding:20px 22px}.cv-block{padding:0 0 13px;margin-bottom:20px;border-bottom:1px solid #e7ebf3}.cv-block:last-child{margin:0;border:0}.cv-block h3{font-size:13px;letter-spacing:.15px;margin:0 0 14px;display:flex;justify-content:space-between;align-items:center}.cv-block .button.tiny{padding:5px 8px;font-size:11px}.cv-photo-controls{display:flex;align-items:center;gap:13px;margin-bottom:15px}.cv-photo-thumb{width:70px;height:70px;object-fit:cover;border-radius:50%;border:3px solid #d9e4ff;background:#dce3ef}.cv-photo-thumb.placeholder{display:grid;place-items:center;font-size:26px;color:#7f93b6}.subform{border:1px solid #e6eaf2;border-radius:12px;padding:12px;margin:12px 0;background:#fbfcff}.subform-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:12px}.subform-head b{font-size:12px}.danger-link{border:0;background:transparent;color:#c25865;font-size:12px;font-weight:750;padding:4px}.toggle-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.toggle-grid label{font-size:12px;color:#52647f;display:flex;gap:6px;align-items:center}.template-options{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.template{border:2px solid #e5e9f1;border-radius:12px;background:#fff;text-align:center;padding:9px 3px;color:#67788f;font-size:11px;font-weight:800}.template.active{border-color:#536aff;color:#465adc;background:#f4f5ff}.template-preview{height:59px;width:44px;border:1px solid #d9dfe8;background:#fff;display:grid;grid-template-columns:15px 1fr;margin:0 auto 6px;overflow:hidden;border-radius:3px}.template-preview i:first-child{background:#253246}.template-preview i:last-child{background:repeating-linear-gradient(0deg,#e5eaf1 0px,#e5eaf1 3px,white 3px,white 9px);margin:9px 5px}.template[data-template=blue] .template-preview i:first-child{background:#506aaf}.template[data-template=clean] .template-preview{grid-template-columns:1fr}.template[data-template=clean] .template-preview i:first-child{display:none}.accent-row{display:flex;align-items:center;gap:9px;margin-top:13px}.accent-row input{width:38px;height:32px;padding:0;border:0;background:transparent;cursor:pointer}.accent-row span{font-size:12px;color:#728097}.cv-preview-wrap{min-width:0}.cv-preview-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px;color:#7b8ba6;font-size:12px}.cv-sheet-outer{width:100%;overflow:auto;background:#e5eaf3;border:1px solid #d9e0ec;border-radius:15px;padding:22px;box-shadow:var(--shadow)}.cv-paper{--accent:#3c6c9a;width:210mm;min-height:297mm;max-width:none;margin:0 auto;background:white;display:grid;grid-template-columns:64mm minmax(0,1fr);font-family:Arial,Helvetica,sans-serif;color:#263242;box-shadow:0 10px 36px #16294718;line-height:1.47;overflow:hidden}.cv-sidebar{background:#30363e;color:#ecf0f5;padding:18mm 9mm 12mm;min-height:297mm;overflow-wrap:anywhere}.cv-maincol{padding:17mm 12mm 13mm;overflow-wrap:anywhere}.cv-profile-photo{display:block;width:39mm;height:39mm;object-fit:cover;border-radius:50%;margin:0 auto 13mm;border:3px solid #d6dde5}.cv-profile-initial{width:39mm;height:39mm;border-radius:50%;margin:0 auto 13mm;background:#596775;color:white;font-size:42px;font-weight:bold;display:grid;place-items:center}.cv-side-section{margin-bottom:9mm}.cv-side-section h4{font-size:9.5pt;margin:0 0 4mm;font-weight:850;letter-spacing:.65px;text-transform:uppercase;border-bottom:1px solid #ffffff45;padding-bottom:2.5mm}.cv-side-section p,.cv-side-section div{font-size:8.5pt;line-height:1.6;margin:0 0 1.5mm;white-space:pre-wrap}.cv-side-section .cv-small{font-size:8pt;color:#d7dfe8}.cv-name{font-size:27pt;line-height:1.06;text-transform:uppercase;letter-spacing:-.7px;margin:0 0 3mm;color:#2e343d}.cv-role{font-size:10pt;letter-spacing:2px;color:var(--accent);text-transform:uppercase;font-weight:850;margin-bottom:11mm}.cv-main-section{margin-bottom:8mm;break-inside:avoid}.cv-main-section h4{font-size:11pt;text-transform:uppercase;margin:0 0 3.5mm;border-bottom:1px solid #d5dde7;padding-bottom:2.4mm;color:#303b4b;letter-spacing:.2px}.cv-main-section p{font-size:8.7pt;line-height:1.65;margin:0;white-space:pre-wrap}.cv-entry{margin-bottom:4.5mm;break-inside:avoid}.cv-entry-head{display:flex;align-items:baseline;justify-content:space-between;gap:8px}.cv-entry-head b{font-size:9pt}.cv-entry-head span{font-size:8pt;color:#7a869a;text-align:right}.cv-entry-company{font-size:8.3pt;color:var(--accent);margin-bottom:1mm;font-weight:800}.cv-entry p{font-size:8.3pt;line-height:1.55}.cv-skill{font-size:8.4pt;margin-bottom:3mm;line-height:1.25}.cv-skill-name{display:flex;justify-content:space-between;margin-bottom:1.4mm}.cv-skill-track{height:2.3mm;background:#b9c3cd5c;border-radius:5px;overflow:hidden}.cv-skill-track i{height:100%;display:block;background:var(--accent);border-radius:5px}.cv-paper[data-template=blue] .cv-sidebar{background:#314775}.cv-paper[data-template=blue] .cv-role,.cv-paper[data-template=blue] .cv-entry-company{color:#4a70b8}.cv-paper[data-template=clean]{grid-template-columns:1fr}.cv-paper[data-template=clean] .cv-sidebar{min-height:0;background:#eef3fb;color:#34475e;padding:9mm 13mm;order:2}.cv-paper[data-template=clean] .cv-maincol{padding:14mm 13mm 4mm}.cv-paper[data-template=clean] .cv-profile-photo,.cv-paper[data-template=clean] .cv-profile-initial{display:none}.cv-paper[data-template=clean] .cv-side-section{margin-bottom:4mm}.cv-paper[data-template=clean] .cv-side-section h4{color:#324667;border-color:#afbfda}.cv-paper[data-template=clean] .cv-side-section p,.cv-paper[data-template=clean] .cv-side-section div,.cv-paper[data-template=clean] .cv-side-section .cv-small{color:#566981}.cv-paper[data-template=clean] .cv-name{font-size:29pt}.cv-paper[data-template=clean] .cv-main-section{margin-bottom:6mm}.cv-paper[data-template=clean] .cv-sidebar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 9mm;align-content:start}.cv-save{font-size:11px;color:#6f7f99;margin:8px 0 0}
+/* Tools */
+.tools-workspace{max-width:930px}.tab-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.tab-btn{font-size:12px;border:1px solid #dee4ee;border-radius:9px;background:#fff;color:#64718a;padding:9px 11px;font-weight:750}.tab-btn.active{color:#4658d7;background:#f0f2ff;border-color:#b9c5ff}.big-emoji{display:grid;place-items:center;font-size:25px;width:48px;height:48px;border-radius:14px;background:#eef1ff}.tool-work-title{display:flex;align-items:center;gap:13px;margin-bottom:19px}.tool-work-title h2{font-size:24px;letter-spacing:-.65px;margin:0}.tool-work-title p{font-size:12px;color:#7d8aa0;margin:2px 0 0}.qr-result{display:inline-block;padding:15px;border-radius:12px;background:#fff;border:1px solid #dce3ee;margin-top:10px}.qr-result canvas{display:block;max-width:100%}.text-metrics{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}.metric{border:1px solid #e5eafa;border-radius:11px;padding:12px;background:#fafbff;min-width:105px}.metric b{display:block;font-size:18px}.metric span{color:#8090aa;font-size:11px}.todo-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}.todo-item span{flex:1;overflow-wrap:anywhere}.todo-item.done span{text-decoration:line-through;color:#9ba8ba}.todo-item button{background:none;border:0;color:#bb6071;font-size:18px}.site-footer{font-size:12px;color:#8792a6;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:55px;padding:20px 0;border-top:1px solid #e3e9f1}.site-footer b{color:#5667da}.toast{position:fixed;z-index:100;bottom:21px;left:50%;transform:translate(-50%,18px);background:#16243f;color:white;border-radius:12px;padding:12px 18px;font-weight:700;font-size:12px;opacity:0;pointer-events:none;transition:.24s;box-shadow:0 14px 40px #14244733}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1350px){.tool-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.cv-layout{grid-template-columns:340px minmax(0,1fr)}.cv-sheet-outer{padding:12px}.cv-preview-wrap{overflow:hidden}}
+@media(max-width:1100px){.shell{grid-template-columns:190px minmax(0,1fr)}.topbar{padding:0 20px}.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr 230px}.cv-layout{grid-template-columns:1fr}.cv-editor{max-height:none;position:static}.cv-sheet-outer{overflow:auto}.top-center{display:none}}
+@media(max-width:700px){.topbar{height:65px;padding:0 14px}.brand{font-size:20px}.brand-symbol{width:35px;height:35px}.top-actions .button{font-size:11px;padding:9px}.shell{display:block}.sidebar{height:auto;position:sticky;top:65px;padding:8px 10px;background:#fff;overflow-x:auto;overflow-y:hidden;white-space:nowrap;z-index:30;border-right:0;border-bottom:1px solid var(--line)}.menu-group{display:inline-flex;gap:4px;margin:0 12px 0 0}.menu-group:nth-child(n+2),.side-note,.menu-title{display:none}.side-link{width:auto;display:inline-flex;padding:9px 10px;font-size:12px;flex-shrink:0}.side-link .emoji{font-size:15px;width:18px}.main{padding:20px 14px 45px}.hero{grid-template-columns:1fr;padding:28px 23px;min-height:0}.hero-art{display:none}.hero h1{font-size:34px}.hero p{font-size:13px}.section-head{align-items:start;flex-direction:column}.searchbar{width:100%}.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.tool-card{min-height:190px;padding:15px}.tool-card h3{font-size:14px}.tool-card p{font-size:11px}.tool-icon{width:43px;height:43px;font-size:21px}.page-heading{align-items:start;flex-direction:column}.page-heading h1{font-size:26px}.surface.pad{padding:18px}.split,.form-pair{grid-template-columns:1fr}.cv-sheet-outer{padding:10px}.cv-paper{transform-origin:top left}.cv-preview-top{align-items:flex-start}.cv-toolbar{gap:6px}}
+@media print{ @page{size:A4;margin:0} html,body{padding:0!important;margin:0!important;background:white!important}body *{visibility:hidden!important}.cv-paper,.cv-paper *{visibility:visible!important}.cv-paper{position:absolute!important;left:0!important;top:0!important;margin:0!important;width:210mm!important;min-height:297mm!important;box-shadow:none!important;border:0!important;transform:none!important;zoom:1!important;overflow:visible!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.cv-sheet-outer{overflow:visible!important}.cv-sidebar{print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important}}
+
+/* ============= ALATKO 5.0, TAMNA TEMA ============= */
+:root{--navy:#07152a;--navy2:#0d2342;--ink:#f1f7ff;--muted:#a6bbd7;--line:#263954;--bg:#061225;--white:#0e213a;--blue:#647bff;--aqua:#59d9e8;--shadow:0 20px 55px #00000040}
+body{background:radial-gradient(ellipse at 20% 0%,#163157 0%,transparent 40%),#061225;color:var(--ink)}
+.topbar{background:#09192def;border-color:#223754;backdrop-filter:blur(16px)}.brand span:last-child{color:#eff6ff}
+.top-link{color:#a7bbd6}.top-link:hover,.top-link.active{background:#1f3353;color:#f2f8ff}
+.sidebar{background:#0a1a30;border-color:#203856}.menu-title{color:#809ab9}.side-link{color:#b3c8e3}.side-link:hover,.side-link.active{background:#1b3151;color:#eff8ff}.side-link.active{box-shadow:inset 3px 0 #69cdeb}.side-note{background:#142846;border-color:#2b4362;color:#acbfda}.side-note b{color:#9cddff}
+.button{background:#192e4a;color:#ecf6ff;border-color:#334b6c}.button:hover{background:#233c5d;border-color:#7493c7}.button.primary{background:linear-gradient(110deg,#5679ff,#2eacd0);border:0;color:#fff;box-shadow:0 9px 24px #336bd434}.button.primary:hover{filter:brightness(1.1)}.button.dark{background:#264b7a}.button.danger{color:#ffc0c8;border-color:#723f4f}
+.breadcrumbs{color:#7e9bbd}.breadcrumbs span{color:#90dcfc}.hero{background:radial-gradient(circle at 88% 20%,#254d91 0,transparent 47%),linear-gradient(110deg,#102748,#091a31);border:1px solid #284566}.hero p{color:#c0d2ec}.hero h1 em{color:#76dfe7}
+.section-head p,.page-heading p,.note,.muted,.cv-save{color:#a5b8d3}.page-heading h1,.section-head h2{color:#f3f8ff}
+.surface,.tool-card{background:linear-gradient(150deg,#102641,#0c1d33);border:1px solid #293f5e;box-shadow:0 8px 24px #0002}.tool-card:hover{border-color:#6d9fff;box-shadow:0 14px 40px #0005}.tool-icon,.big-emoji{background:#26476b;color:#b8eaff}.tool-card h3{color:#f3f8ff}.tool-card p{color:#a8c0db}.card-foot{color:#91a9c9}.card-foot b{color:#93caff}
+.searchbar input,.field input,.field textarea,.field select,select.base,input.base{background:#081a30;border:1px solid #334766;color:#f2f8ff}.field label{color:#c8d6eb}.field input::placeholder,.field textarea::placeholder,.searchbar input::placeholder{color:#7892b5}.field input:focus,.field textarea:focus,.field select:focus{border-color:#5cd8ec;box-shadow:0 0 0 3px #50d1ea18}
+.chip{background:#152b48;color:#b1c8e4;border-color:#2b4262}.chip.active,.chip:hover{background:#294d7c;color:#fff;border-color:#618ebf}.icon-btn{background:#20395a;color:#c5d9f2;border-color:#314a6e}.tag,.new-chip{display:inline-block;background:#31588c;color:#d7efff;border-radius:50px;padding:5px 10px;font-size:10px;font-weight:800;vertical-align:middle}
+.eyeline{background:#17314e;color:#b4d5f4;border:1px solid #2b5072}.result{background:#132e4c;border:1px solid #365a7e}.result strong,.result p{color:#e4f5ff}.result small{color:#9db8d3}.empty-state{color:#bdd0e8;border-color:#3b5577}.metric,.qr-result{background:#152b47;border-color:#29415e}.metric span{color:#adc1d9}.text-metrics .metric b{color:#fff}.tab-btn{background:#172c49;color:#b7c9e4;border-color:#2b4361}.tab-btn.active{background:#26466f;color:#fff;border-color:#6389af}
+.cv-block{border-bottom:1px solid #304561}.editor-head{border-bottom:1px solid #304561}.cv-block h3{color:#eaf4ff}.cv-template{color:#fff}.template{background:#152d4d;color:#c2d8ee;border-color:#385477}.template.active{border-color:#64cce5;background:#24486b;color:#fff}.accent-row{color:#b9cde7}.cv-photo-thumb{border-color:#385372}.cv-save{color:#9cb6d5}.cv-preview-top{color:#b4d0ee}.cv-sheet-outer{background:#132641;border:1px solid #294365}.cv-photo-controls .note{color:#9eb4d2}.subform{background:#112941;border-color:#314968}.subform-head{color:#eef5ff}.toggle-grid label{color:#bfd2e9}.danger-link{color:#fa9aab}
+.site-footer{color:#94abc9;border-top:1px solid #263f5f}.site-footer b,.site-footer strong{color:#83ddff}.site-footer a{text-decoration:underline;text-underline-offset:3px}
+/* Easy navigation and quick actions */
+.side-how{margin:14px 7px;background:linear-gradient(150deg,#193758,#102842);border:1px solid #315274;border-radius:17px;padding:16px;color:#c3d6ec;display:grid;gap:9px;font-size:12px}.side-how>b{color:#fff;font-size:13px;margin-bottom:2px}.side-how strong{color:#72dcf6;margin-right:7px}
+.quick-guides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 12px}.quick-guides button{border:1px solid #314c6c;border-radius:16px;background:#142d49;color:white;display:flex;align-items:center;gap:12px;padding:16px;text-align:left;flex-wrap:wrap;cursor:pointer}.quick-guides button:hover{border-color:#76cdef;background:#1c3d63}.quick-guides button>span{font-size:25px}.quick-guides button b{font-size:13px}.quick-guides button small{width:100%;padding-left:41px;color:#adc6e3}
+/* Polished CV / A4 ready for export */
+.cv-paper{display:block!important;width:210mm;min-height:297mm;background:#0b1b31!important;color:#edf6ff;--accent:#5cdfe8;box-shadow:0 12px 36px #0007;overflow:hidden}
+.resume-hero{display:grid;grid-template-columns:60mm minmax(0,1fr);gap:14mm;align-items:center;padding:12mm 13mm 9mm;min-height:86mm;background:linear-gradient(118deg,#102a4a,#081628);border-bottom:2.5mm solid var(--accent)}
+.resume-image{height:59mm;display:flex;align-items:center;justify-content:center}.cv-resume-portrait{width:59mm;height:59mm;object-fit:cover;border:1.2mm solid #89e8f355;border-radius:3mm}.cv-resume-initial{width:59mm;height:59mm;display:grid;place-items:center;background:#254a6c;color:#eafaff;font-size:52pt;font-weight:900;border-radius:3mm}
+.resume-line{height:1.1mm;background:var(--accent);margin:0 0 7mm}.resume-identity h2{font-size:34pt;line-height:1.02;letter-spacing:-.95px;text-transform:uppercase;margin:0 0 5mm;color:#f5f9ff;overflow-wrap:anywhere}.resume-identity p{font-size:12.5pt;color:#b8d2ec;font-weight:750;line-height:1.4;margin:0}
+.resume-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);min-height:211mm}.cv-maincol{padding:12mm 9mm 12mm 13mm;background:#112846;overflow-wrap:anywhere}.cv-sidebar{min-height:0!important;padding:12mm 11mm 13mm;background:#081a31;color:#edf5ff;overflow-wrap:anywhere}
+.cv-main-section{margin-bottom:9mm;break-inside:avoid}.cv-main-section h4{font-size:11pt;color:#f5f9ff;border-bottom:1px solid #5acbdc5a;padding-bottom:2.5mm;letter-spacing:.45px}.cv-main-section p{color:#c1d4e9;font-size:9pt;line-height:1.55}.cv-entry{margin-bottom:5mm}.cv-entry-head b{color:#f6faff;font-size:9.2pt}.cv-entry-head span{color:#a6c5e4}.cv-entry-company{color:var(--accent)}.cv-entry p{color:#c3d3e6}
+.cv-side-section{margin-bottom:10mm}.cv-side-section h4{color:#ecf8ff;border-bottom:1px solid #a9d6ec55;font-size:10pt}.cv-side-section p,.cv-side-section div{color:#d0e0ed;font-size:8.6pt}.cv-side-section .cv-small{display:flex;gap:2mm;align-items:flex-start;font-size:8pt;overflow-wrap:anywhere;margin-bottom:3mm}.cv-small span{color:#70d8eb;font-weight:bold;flex:0 0 4mm}.cv-skill-track{display:none}.cv-skill{margin-bottom:2mm}
+.cv-paper[data-template=blue] .resume-hero{background:linear-gradient(118deg,#2a5fb3,#122d66)}.cv-paper[data-template=blue] .cv-maincol{background:#17386c}.cv-paper[data-template=blue] .cv-sidebar{background:#0b2450}.cv-paper[data-template=blue]{background:#122e59!important}
+.cv-paper[data-template=clean] .resume-hero{background:#121925}.cv-paper[data-template=clean] .cv-maincol{background:#1a2430}.cv-paper[data-template=clean] .cv-sidebar{background:#101924}.cv-paper[data-template=clean]{background:#141c29!important}.cv-paper[data-template=clean] .resume-identity h2{color:#fff}.cv-paper[data-template=clean] .cv-main-section h4{color:#fff}.cv-paper[data-template=clean] .cv-side-section h4{color:#fff}
+/* Feedback / about */
+.review-layout,.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.review-item{padding:17px 0;border-bottom:1px solid #304866}.review-item:last-child{border:0}.review-item-head{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.review-item-head strong{color:#f6f9ff}.review-item .stars{color:#ffca77;letter-spacing:2px}.review-item p{color:#c2d3ea;font-size:13px;margin:7px 0;white-space:pre-wrap;overflow-wrap:anywhere}.review-item small{color:#8da8c8}.review-pending{color:#89ddf5;font-size:11px;font-weight:800}.founder{display:grid;gap:5px;padding:19px;border:1px solid #2d4e74;border-radius:12px;background:#152d4b;margin-top:20px}.founder span{font-size:11px;color:#a0bfdc}.founder b{font-size:21px;color:#8ee2ff}.about-grid h2{margin-bottom:12px}.about-grid p{color:#bdcfe5;font-size:13px;line-height:1.75}.about-icon{font-size:28px;background:#26466e;width:58px;height:58px;border-radius:17px;display:grid;place-items:center;margin-bottom:15px}
+/* Gate */
+.auth-gate{position:fixed;inset:0;z-index:200;background:#051124;display:grid;place-items:center;overflow-y:auto;padding:28px 15px}.auth-gate[hidden]{display:none!important}.auth-glow{position:fixed;inset:0;background:radial-gradient(ellipse at 20% 10%,#1b4b84 0,transparent 42%),radial-gradient(ellipse at 90% 80%,#124a66 0,transparent 44%);pointer-events:none}.auth-card{position:relative;z-index:1;width:min(100%,490px);background:#10243d;border:1px solid #325075;padding:30px;border-radius:25px;box-shadow:0 30px 100px #0008}.auth-brand{display:flex;align-items:center;gap:11px;font-size:22px;margin-bottom:28px}.auth-eyebrow{font-size:11px;color:#83d8ea;font-weight:900;letter-spacing:1.6px}.auth-card h1{font-size:30px;line-height:1.1;margin:9px 0 10px;letter-spacing:-1px}.auth-lead{font-size:13px;color:#aec3dd;line-height:1.65;margin-bottom:21px}.auth-switch{display:grid;grid-template-columns:1fr 1fr;padding:4px;background:#0b1b30;border-radius:12px;gap:6px;margin-bottom:21px}.auth-switch button{border:0;color:#a2b8d4;background:transparent;font-weight:800;padding:10px;border-radius:10px}.auth-switch button.active{background:#2a4d76;color:#fff}.auth-card .field{margin-bottom:12px}.auth-submit{width:100%;justify-content:center;margin-top:7px}.auth-error{font-size:12px;color:#ffb5bc;min-height:15px;margin:6px 0}.auth-demo{border:1px solid #406488;background:#172f4f;border-radius:14px;padding:15px;margin-top:18px}.auth-demo>b{font-size:13px;color:#eaf8ff}.auth-demo p,.auth-privacy{color:#a6bfd9;font-size:11px;line-height:1.6;margin:7px 0 12px}.auth-demo .button{width:100%}.auth-privacy{margin-top:13px;margin-bottom:0}.auth-forgot{margin-top:12px;border:0;background:none;color:#8bdfff;text-decoration:underline;font-size:12px}
+@media(max-width:1100px){.review-layout,.about-grid{grid-template-columns:1fr}.side-how{display:none}}
+@media(max-width:700px){.quick-guides{grid-template-columns:1fr 1fr}.quick-guides button{padding:12px}.quick-guides button:last-child{grid-column:1/-1}.quick-guides button small{padding-left:0}.auth-card{padding:22px 18px}.auth-card h1{font-size:26px}.cv-paper{width:210mm}.side-link{margin:0 1px}.sidebar{background:#0a1a30;border-color:#304766}.topbar{background:#08192f}}
+@media print{
+ .auth-gate{display:none!important}.cv-paper{background:#0b1b31!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}.resume-hero,.resume-grid,.cv-sidebar,.cv-maincol{break-inside:avoid-page;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+ .cv-paper[data-template=blue],.cv-paper[data-template=clean]{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <a href="#home" class="brand" aria-label="ALATKO početna"><span class="brand-symbol">A</span><span>ALATKO<span style="color:#657bfa">.</span></span></a>
+ <nav class="top-center"><a class="top-link" href="#home" data-route="home">Početna</a><a class="top-link" href="#cv" data-route="cv">CV Studio</a><a class="top-link" href="#tools" data-route="tools">Svi alati</a><a class="top-link" href="#feedback" data-route="feedback">Utisci</a></nav>
+ <div class="top-actions"><button class="button" id="accountButton" onclick="go('space')">👤 Moj nalog</button><button class="button primary" onclick="go('cv')">Napravi CV ↗</button></div>
+</header>
+<div class="shell">
+<aside class="sidebar" aria-label="Navigacija">
+  <div class="menu-group"><div class="menu-title">JEDNOSTAVNO KORIŠĆENJE</div>
+    <button class="side-link" data-route="home" onclick="go('home')"><span class="emoji">🏠</span> Početna</button>
+    <button class="side-link" data-route="cv" onclick="go('cv')"><span class="emoji">📄</span> Napravi CV</button>
+    <button class="side-link" data-route="tools" onclick="go('tools')"><span class="emoji">🧰</span> Svi alati</button>
+    <button class="side-link" data-route="feedback" onclick="go('feedback')"><span class="emoji">💬</span> Utisci o sajtu</button>
+    <button class="side-link" data-route="space" onclick="go('space')"><span class="emoji">👤</span> Moj nalog</button>
+    <button class="side-link" data-route="about" onclick="go('about')"><span class="emoji">ℹ️</span> O ALATKU</button>
+  </div>
+  <div class="side-how"><b>Kako se koristi?</b><span><strong>1.</strong> Izaberi alat</span><span><strong>2.</strong> Unesi podatke</span><span><strong>3.</strong> Preuzmi rezultat</span></div>
+  <div class="side-note"><b>✦ ALATKO 5.0</b> Kreirao Strahinja Paic.<br>Pravi nalozi i javni utisci rade nakon povezivanja baze.</div>
+</aside>
+<main class="main" id="mainArea">
+ <section class="page" id="page-home">
+   <div class="breadcrumbs">ALATKO / <span>Početna</span></div>
+   <div class="hero"><div><div class="eyebrow">✦ Tvoj online paket alata</div><h1>Jednostavni alati.<br><em>Odlični rezultati.</em></h1><p>Napravi lep CV sa svojom fotografijom, sredi slike, napravi QR kod ili izračunaj šta ti treba. Sve je pregledno i na srpskom.</p><div style="display:flex;gap:9px;flex-wrap:wrap"><button class="button primary" onclick="go('cv')">📄 Napravi svoj CV</button><button class="button" onclick="go('tools')">Pogledaj sve alate →</button></div><div class="hero-chips"><span>✓ Tri jednostavna koraka</span><span>✓ Na srpskom</span><span>✓ Lepo i na telefonu</span></div></div><div class="hero-art"><div class="art-dots"></div><div class="art-paper"><div class="art-dark"><div class="art-photo"></div><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="art-white"><b></b><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div></div></div>
+   <div class="quick-guides"><button onclick="go('cv')"><span>📄</span><b>Želim CV</b><small>Fotografija i PDF</small></button><button onclick="go('image')"><span>🖼️</span><b>Želim da sredim sliku</b><small>Smanji veličinu</small></button><button onclick="go('feedback')"><span>💬</span><b>Imam predlog</b><small>Ostavi utisak</small></button></div>
+<div class="section-head"><div><h2>Šta želiš da napraviš?</h2><p>Klikni na alat i prati uputstvo.</p></div><div class="searchbar"><input id="homeSearch" placeholder="Pretraži alate..." aria-label="Pretraži alate"></div></div>
+   <div class="chips" id="homeFilters"></div><div class="tool-grid" id="homeGrid"></div>
+ </section>
+ <section class="page" id="page-tools" hidden><div class="breadcrumbs">ALATKO / <span>Svi alati</span></div><div class="page-heading"><div><h1>Svi online alati</h1><p>Izaberi kategoriju ili pronađi alat koji ti treba.</p></div><div class="searchbar"><input id="allSearch" placeholder="Šta tražiš?" aria-label="Pretraži sve alate"></div></div><div class="chips" id="allFilters"></div><div class="tool-grid" id="allGrid"></div></section>
+ <section class="page" id="page-cv" hidden>
+  <div class="breadcrumbs">ALATKO / Dokumenti / <span>CV Studio</span></div>
+  <div class="page-heading"><div><h1>CV Studio <span class="new-chip">NOVO</span></h1><p>Napravi CV sa svojom fotografijom. Sve promene vidiš odmah desno.</p></div><div class="cv-toolbar"><button class="button" onclick="loadSampleCV()">Učitaj primer</button><button class="button" onclick="saveCV(true)">💾 Sačuvaj skicu</button><button class="button primary" onclick="printCV()">⬇ Sačuvaj kao PDF</button></div></div>
+  <div class="eyeline">💡 <b>Kako radi?</b> 1. Popuni polja levo. 2. Pogledaj izgled desno. 3. Klikni <b>„Sačuvaj kao PDF“</b>. Podaci i fotografija čuvaju se lokalno u ovom pregledaču.</div>
+  <div class="cv-layout">
+   <div class="surface cv-editor"><div class="editor-head"><h2>✍️ Popuni svoj CV</h2><button class="button tiny danger" onclick="clearCV()">Obriši sve</button></div>
+    <div class="editor-inner" id="cvInputs">
+     <div class="cv-block"><h3>1. 🎨 Izaberi izgled</h3><div class="template-options" id="cvTemplates"><button class="template active" data-template="dark" onclick="setCVTemplate('dark')"><span class="template-preview"><i></i><i></i></span>Tamni</button><button class="template" data-template="blue" onclick="setCVTemplate('blue')"><span class="template-preview"><i></i><i></i></span>Kraljevsko plavi</button><button class="template" data-template="clean" onclick="setCVTemplate('clean')"><span class="template-preview"><i></i><i></i></span>Noćni</button></div><div class="accent-row"><input id="cvAccent" type="color" value="#3c6c9a" aria-label="Boja CV-ja"><span>Izaberi boju detalja</span></div></div>
+     <div class="cv-block"><h3>2. 📷 Dodaj svoju sliku</h3><div class="cv-photo-controls"><div id="cvPhotoThumb" class="cv-photo-thumb placeholder">👤</div><div><label class="button tiny" for="cvPhoto">📷 Ubaci svoju sliku</label><input type="file" accept="image/jpeg,image/png,image/webp" id="cvPhoto" hidden><button class="danger-link" onclick="removeCVPhoto()">Ukloni sliku</button><div class="note">JPG, PNG ili WebP do 8 MB.</div></div></div></div>
+     <div class="cv-block"><h3>3. 👤 Osnovni podaci</h3><div class="field"><label for="cvName">Ime i prezime</label><input id="cvName" data-cv="name" placeholder="Npr. Marko Jovanović"></div><div class="field"><label for="cvRole">Zanimanje / pozicija</label><input id="cvRole" data-cv="role" placeholder="Npr. Grafički dizajner"></div><div class="form-pair"><div class="field"><label for="cvEmail">Email</label><input id="cvEmail" data-cv="email" type="email" placeholder="ime@primer.rs"></div><div class="field"><label for="cvPhone">Telefon</label><input id="cvPhone" data-cv="phone" placeholder="060 123 4567"></div></div><div class="form-pair"><div class="field"><label for="cvCity">Grad</label><input id="cvCity" data-cv="city" placeholder="Novi Sad"></div><div class="field"><label for="cvWebsite">Sajt / LinkedIn</label><input id="cvWebsite" data-cv="website" placeholder="linkedin.com/in/ime"></div></div><div class="field"><label for="cvAbout">O meni</label><textarea id="cvAbout" data-cv="about" rows="4" placeholder="Napiši kratak opis o sebi..."></textarea></div></div>
+     <div class="cv-block"><h3>4. 💼 Radno iskustvo <button class="button tiny" onclick="addCVItem('experience')">+ Dodaj</button></h3><div id="experienceItems"></div></div>
+     <div class="cv-block"><h3>5. 🎓 Obrazovanje <button class="button tiny" onclick="addCVItem('education')">+ Dodaj</button></h3><div id="educationItems"></div></div>
+     <div class="cv-block"><h3>6. ⭐ Veštine i jezici</h3><div class="field"><label for="cvSkills">Veštine (odvoji zarezom)</label><textarea id="cvSkills" data-cv="skills" rows="3" placeholder="Photoshop, Rad na računaru, Timski rad"></textarea></div><div class="field"><label for="cvLanguages">Jezici (odvoji zarezom)</label><input id="cvLanguages" data-cv="languages" placeholder="Srpski, Engleski"></div><div class="field"><label for="cvInterests">Interesovanja (odvoji zarezom)</label><input id="cvInterests" data-cv="interests" placeholder="Fotografija, Putovanja"></div><div class="field"><label for="cvLicense">Vozačka dozvola</label><input id="cvLicense" data-cv="license" placeholder="B kategorija"></div><div class="toggle-grid"><label><input id="cvShowLanguages" type="checkbox" checked> Prikaži jezike</label><label><input id="cvShowInterests" type="checkbox" checked> Interesovanja</label><label><input id="cvShowLicense" type="checkbox" checked> Vozačka dozvola</label><label><input id="cvShowPhoto" type="checkbox" checked> Fotografija</label></div></div>
+    </div>
+   </div>
+   <div class="cv-preview-wrap"><div class="cv-preview-top"><span>👁 Pregled uživo · format A4</span><span id="cvSaveStatus">Primer — zameni svojim podacima</span></div><div class="cv-sheet-outer" id="cvSheetOuter"><article class="cv-paper" id="cvPaper" data-template="dark">
+      <div class="resume-hero"><div class="resume-image" id="cvHeroPhoto"></div><div class="resume-identity"><div class="resume-line"></div><h2 id="cvHeadName">Ime i prezime</h2><p id="cvHeadRole">Zanimanje</p></div></div>
+      <div class="resume-grid"><div class="cv-maincol" id="cvMaincol"></div><aside class="cv-sidebar" id="cvSidebar"></aside></div>
+    </article></div><p class="cv-save">Savet: koristi kratke opise iskustva da CV ostane pregledan. Tekst koji unosiš vidiš odmah desno.</p></div>
+  </div>
+ </section>
+ <section class="page" id="page-work" hidden><div class="breadcrumbs">ALATKO / <span id="workCrumb">Alat</span></div><div class="page-heading"><div><h1 id="workHeading">Alat</h1><p id="workSubtitle">Besplatan online alat.</p></div><button class="button" onclick="go('tools')">← Svi alati</button></div><div class="tools-workspace"><div class="surface pad" id="toolWorkspace"></div></div></section>
+ <section class="page" id="page-space" hidden><div class="breadcrumbs">ALATKO / <span>Moj prostor</span></div><div class="page-heading"><div><h1>Moj nalog i beleške</h1><p>Nalog služi za prijavu, a nacrt CV-ja i beleške se za sada čuvaju na tvom uređaju.</p></div></div><div class="eyeline">🔒 <b>Status naloga:</b> <span id="accountState">Demo bez povezanog servera</span>. Nacrti CV-ja, beleške i omiljeni alati za sada su sačuvani samo u ovom pregledaču, ne sinhronizuju se između uređaja.</div>
+    <div class="form-actions"><button class="button" id="logoutButton" onclick="logoutUser()">Odjavi se</button></div><div class="split"><div class="surface pad"><h3>📝 Moje beleške</h3><div class="field"><label for="personalNote">Zapiši ideju ili podsetnik</label><textarea id="personalNote" rows="9" placeholder="Napiši nešto što želiš da sačuvaš na svom računaru..."></textarea></div><p class="note">Beleške se automatski čuvaju lokalno.</p><button class="button" onclick="clearNotes()">Obriši beleške</button></div><div class="surface pad"><h3>📄 Moj CV</h3><p class="note">Sačuvani nacrt CV-ja dostupan je dok koristiš isti pregledač i ne obrišeš lokalne podatke.</p><div class="form-actions"><button class="button primary" onclick="go('cv')">Otvori CV Studio</button><button class="button danger" onclick="clearCV()">Obriši sačuvani CV</button></div><hr style="border:0;border-top:1px solid var(--line);margin:25px 0"><h3>⭐ Omiljeni alati</h3><p class="note">Klikni ☆ na karticama alata da ih dodaš ovde.</p><div id="favoriteList"></div></div></div></section>
+ 
+<section class="page" id="page-feedback" hidden>
+ <div class="breadcrumbs">ALATKO / <span>Utisci</span></div>
+ <div class="page-heading"><div><h1>💬 Utisci i predlozi</h1><p>Reci nam šta ti se sviđa i šta možemo da poboljšamo.</p></div></div>
+ <div class="review-layout"><div class="surface pad"><h3>Ostavi komentar</h3>
+ <div class="eyeline" id="reviewModeNote">U demo režimu komentar se čuva samo na ovom uređaju. Posle povezivanja baze posetioci sa nalogom mogu da ostave utisak.</div>
+ <form id="reviewForm" onsubmit="submitReview(event)">
+  <div class="field"><label for="reviewName">Kako da te potpišemo? (nadimak)</label><input id="reviewName" placeholder="Npr. Posetilac" maxlength="35" required></div>
+  <div class="field"><label for="reviewRating">Ocena sajta</label><select id="reviewRating" required><option value="5">⭐⭐⭐⭐⭐ — Odlično</option><option value="4">⭐⭐⭐⭐ — Dobro</option><option value="3">⭐⭐⭐ — Može bolje</option><option value="2">⭐⭐ — Slabo</option><option value="1">⭐ — Loše</option></select></div>
+  <div class="field"><label for="reviewMessage">Tvoj komentar ili predlog</label><textarea id="reviewMessage" rows="5" minlength="10" maxlength="600" placeholder="Napiši šta bi voleo da dodamo ili promenimo..." required></textarea></div>
+  <button class="button primary" type="submit" id="reviewSubmit">Pošalji utisak →</button>
+ </form></div>
+ <div class="surface pad"><h3>Šta kažu posetioci?</h3><p class="note" id="reviewSummary">Prikazuju se objavljeni utisci.</p><div id="reviewList" aria-live="polite"><p class="note">Nema komentara.</p></div></div></div>
+</section>
+<section class="page" id="page-about" hidden>
+ <div class="breadcrumbs">ALATKO / <span>O nama</span></div>
+ <div class="page-heading"><div><h1>O ALATKU</h1><p>Jednostavni online alati na jednom mestu.</p></div></div>
+ <div class="about-grid"><div class="surface pad"><div class="about-icon">✦</div><h2>Zašto ALATKO?</h2><p>ALATKO je napravljen da svako može bez mnogo razmišljanja da izabere alat, unese nekoliko podataka i dobije rezultat. Poseban fokus je na lepim biografijama i alatima koji su korisni u školi, na poslu i svakog dana.</p><div class="founder"><span>Autor i kreator sajta</span><b>Strahinja Paic</b></div></div>
+ <div class="surface pad"><h2>Važne informacije</h2><p><b>CV i fotografije:</b> obrađuju se u tvom pregledaču. Nacrti, beleške i omiljeni alati se trenutno čuvaju lokalno.</p><p><b>Korisnički nalozi:</b> aktiviraju se kada se poveže Supabase projekat i uključi prijava.</p><p><b>Utisci:</b> objavljuju se nakon provere kako bi sajt ostao prijatan za sve.</p><p><b>Privatnost:</b> pre javne objave sajta potrebno je dodati potpuna pravila privatnosti i kontakt za korisnike.</p><button class="button primary" onclick="go('feedback')">Pošalji predlog ↗</button></div></div>
+</section>
+<footer class="site-footer"><div><b>✦ ALATKO</b> · Kreator: <strong>Strahinja Paic</strong></div><div>© <span id="currentYear"></span> · <a href="#about">O nama</a> · <a href="#feedback">Utisci</a> · Lokalno čuvanje nacrta</div></footer>
+</main></div>
+
+<div class="auth-gate" id="authGate" hidden aria-label="Prijava na sajt">
+ <div class="auth-glow"></div><div class="auth-card">
+   <div class="auth-brand"><span class="brand-symbol">A</span><b>ALATKO<span style="color:#6db9ff">.</span></b></div>
+   <div class="auth-eyebrow" id="authEyebrow">DOBRO DOŠAO</div><h1 id="authTitle">Napravi nalog i kreni.</h1>
+   <p class="auth-lead">Jednostavni alati, lepi CV-jevi i mesto za tvoje predloge — sve na jednom mestu.</p>
+   <div class="auth-switch"><button class="active" data-mode="signup" onclick="showAuthMode('signup')">Registracija</button><button data-mode="signin" onclick="showAuthMode('signin')">Prijava</button></div>
+   <form id="authForm" onsubmit="handleAuth(event)">
+    <div class="field" id="authNameWrap"><label for="authName">Ime ili nadimak</label><input id="authName" placeholder="Kako želiš da te zovemo?" maxlength="35" autocomplete="nickname"></div>
+    <div class="field"><label for="authEmail">Email adresa</label><input id="authEmail" type="email" placeholder="ime@primer.rs" autocomplete="email" required></div>
+    <div class="field"><label for="authPassword">Lozinka</label><input id="authPassword" type="password" minlength="8" placeholder="Najmanje 8 karaktera" autocomplete="new-password" required></div>
+    <div class="field" id="authRepeatWrap"><label for="authRepeat">Ponovi lozinku</label><input id="authRepeat" type="password" minlength="8" placeholder="Ponovi istu lozinku" autocomplete="new-password"></div>
+    <p class="auth-error" id="authError" role="alert"></p>
+    <button class="button primary auth-submit" id="authSubmit" type="submit">Napravi nalog →</button>
+   </form>
+   <button class="auth-forgot" id="forgotButton" onclick="resetMyPassword()" hidden>Zaboravio si lozinku?</button>
+   <div id="recoveryPanel" hidden>
+    <div class="field"><label for="newPassword">Nova lozinka</label><input id="newPassword" type="password" minlength="8" placeholder="Najmanje 8 karaktera" autocomplete="new-password"></div>
+    <div class="field"><label for="repeatNewPassword">Ponovi novu lozinku</label><input id="repeatNewPassword" type="password" minlength="8" placeholder="Ponovi lozinku" autocomplete="new-password"></div>
+    <button class="button primary auth-submit" onclick="saveNewPassword()">Promeni lozinku →</button>
+   </div>
+   <div class="auth-demo" id="authDemo">
+      <b>Pregled dok sajt nije javno povezan</b>
+      <p>Prava registracija i javni komentari zahtevaju besplatni Supabase projekat. Možeš odmah testirati sve alate u demo režimu.</p>
+      <button class="button" onclick="enterDemo()">👀 Pogledaj demo verziju</button>
+   </div>
+   <p class="auth-privacy" id="authPrivacy">Ne unosi pravu lozinku dok nalog nije povezan. Pre objave, potrebno je pripremiti i pravila privatnosti.</p>
+ </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<!-- QR vendor included inline at build time. Original QRCode for JavaScript (c) Kazuhiko Arase, MIT License. -->
+<script>
+/* QRCode for JavaScript, (c) 2009 Kazuhiko Arase, MIT licensed. Embedded locally for offline use. */
+const QRCodeVendor=(function(){
+const factories={
+'QR8bitByte': function(require,module,exports){
+var QRMode = require('./QRMode');
+
+function QR8bitByte(data) {
+	this.mode = QRMode.MODE_8BIT_BYTE;
+	this.data = data;
+}
+
+QR8bitByte.prototype = {
+
+	getLength : function() {
+		return this.data.length;
+	},
+	
+	write : function(buffer) {
+		for (var i = 0; i < this.data.length; i++) {
+			// not JIS ...
+			buffer.put(this.data.charCodeAt(i), 8);
+		}
+	}
+};
+
+module.exports = QR8bitByte;
+
+},
+'QRBitBuffer': function(require,module,exports){
+function QRBitBuffer() {
+	this.buffer = [];
+	this.length = 0;
+}
+
+QRBitBuffer.prototype = {
+
+	get : function(index) {
+		var bufIndex = Math.floor(index / 8);
+		return ( (this.buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+	},
+	
+	put : function(num, length) {
+		for (var i = 0; i < length; i++) {
+			this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+		}
+	},
+	
+	getLengthInBits : function() {
+		return this.length;
+	},
+	
+	putBit : function(bit) {
+	
+		var bufIndex = Math.floor(this.length / 8);
+		if (this.buffer.length <= bufIndex) {
+			this.buffer.push(0);
+		}
+	
+		if (bit) {
+			this.buffer[bufIndex] |= (0x80 >>> (this.length % 8) );
+		}
+	
+		this.length++;
+	}
+};
+
+module.exports = QRBitBuffer;
+
+},
+'QRErrorCorrectLevel': function(require,module,exports){
+module.exports = {
+	L : 1,
+	M : 0,
+	Q : 3,
+	H : 2
+};
+
+
+},
+'QRMaskPattern': function(require,module,exports){
+module.exports = {
+	PATTERN000 : 0,
+	PATTERN001 : 1,
+	PATTERN010 : 2,
+	PATTERN011 : 3,
+	PATTERN100 : 4,
+	PATTERN101 : 5,
+	PATTERN110 : 6,
+	PATTERN111 : 7
+};
+
+},
+'QRMath': function(require,module,exports){
+var QRMath = {
+
+	glog : function(n) {
+	
+		if (n < 1) {
+			throw new Error("glog(" + n + ")");
+		}
+		
+		return QRMath.LOG_TABLE[n];
+	},
+	
+	gexp : function(n) {
+	
+		while (n < 0) {
+			n += 255;
+		}
+	
+		while (n >= 256) {
+			n -= 255;
+		}
+	
+		return QRMath.EXP_TABLE[n];
+	},
+	
+	EXP_TABLE : new Array(256),
+	
+	LOG_TABLE : new Array(256)
+
+};
+	
+for (var i = 0; i < 8; i++) {
+	QRMath.EXP_TABLE[i] = 1 << i;
+}
+for (var i = 8; i < 256; i++) {
+	QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4]
+		^ QRMath.EXP_TABLE[i - 5]
+		^ QRMath.EXP_TABLE[i - 6]
+		^ QRMath.EXP_TABLE[i - 8];
+}
+for (var i = 0; i < 255; i++) {
+	QRMath.LOG_TABLE[QRMath.EXP_TABLE[i] ] = i;
+}
+
+module.exports = QRMath;
+
+},
+'QRMode': function(require,module,exports){
+module.exports = {
+    MODE_NUMBER :       1 << 0,
+    MODE_ALPHA_NUM :    1 << 1,
+    MODE_8BIT_BYTE :    1 << 2,
+    MODE_KANJI :        1 << 3
+};
+
+},
+'QRPolynomial': function(require,module,exports){
+var QRMath = require('./QRMath');
+
+function QRPolynomial(num, shift) {
+	if (num.length === undefined) {
+		throw new Error(num.length + "/" + shift);
+	}
+
+	var offset = 0;
+
+	while (offset < num.length && num[offset] === 0) {
+		offset++;
+	}
+
+	this.num = new Array(num.length - offset + shift);
+	for (var i = 0; i < num.length - offset; i++) {
+		this.num[i] = num[i + offset];
+	}
+}
+
+QRPolynomial.prototype = {
+
+	get : function(index) {
+		return this.num[index];
+	},
+	
+	getLength : function() {
+		return this.num.length;
+	},
+	
+	multiply : function(e) {
+	
+		var num = new Array(this.getLength() + e.getLength() - 1);
+	
+		for (var i = 0; i < this.getLength(); i++) {
+			for (var j = 0; j < e.getLength(); j++) {
+				num[i + j] ^= QRMath.gexp(QRMath.glog(this.get(i) ) + QRMath.glog(e.get(j) ) );
+			}
+		}
+	
+		return new QRPolynomial(num, 0);
+	},
+	
+	mod : function(e) {
+	
+		if (this.getLength() - e.getLength() < 0) {
+			return this;
+		}
+	
+		var ratio = QRMath.glog(this.get(0) ) - QRMath.glog(e.get(0) );
+	
+		var num = new Array(this.getLength() );
+		
+		for (var i = 0; i < this.getLength(); i++) {
+			num[i] = this.get(i);
+		}
+		
+		for (var x = 0; x < e.getLength(); x++) {
+			num[x] ^= QRMath.gexp(QRMath.glog(e.get(x) ) + ratio);
+		}
+	
+		// recursive call
+		return new QRPolynomial(num, 0).mod(e);
+	}
+};
+
+module.exports = QRPolynomial;
+
+},
+'QRRSBlock': function(require,module,exports){
+var QRErrorCorrectLevel = require('./QRErrorCorrectLevel');
+
+function QRRSBlock(totalCount, dataCount) {
+	this.totalCount = totalCount;
+	this.dataCount  = dataCount;
+}
+
+QRRSBlock.RS_BLOCK_TABLE = [
+
+	// L
+	// M
+	// Q
+	// H
+
+	// 1
+	[1, 26, 19],
+	[1, 26, 16],
+	[1, 26, 13],
+	[1, 26, 9],
+	
+	// 2
+	[1, 44, 34],
+	[1, 44, 28],
+	[1, 44, 22],
+	[1, 44, 16],
+
+	// 3
+	[1, 70, 55],
+	[1, 70, 44],
+	[2, 35, 17],
+	[2, 35, 13],
+
+	// 4		
+	[1, 100, 80],
+	[2, 50, 32],
+	[2, 50, 24],
+	[4, 25, 9],
+	
+	// 5
+	[1, 134, 108],
+	[2, 67, 43],
+	[2, 33, 15, 2, 34, 16],
+	[2, 33, 11, 2, 34, 12],
+	
+	// 6
+	[2, 86, 68],
+	[4, 43, 27],
+	[4, 43, 19],
+	[4, 43, 15],
+	
+	// 7		
+	[2, 98, 78],
+	[4, 49, 31],
+	[2, 32, 14, 4, 33, 15],
+	[4, 39, 13, 1, 40, 14],
+	
+	// 8
+	[2, 121, 97],
+	[2, 60, 38, 2, 61, 39],
+	[4, 40, 18, 2, 41, 19],
+	[4, 40, 14, 2, 41, 15],
+	
+	// 9
+	[2, 146, 116],
+	[3, 58, 36, 2, 59, 37],
+	[4, 36, 16, 4, 37, 17],
+	[4, 36, 12, 4, 37, 13],
+	
+	// 10		
+	[2, 86, 68, 2, 87, 69],
+	[4, 69, 43, 1, 70, 44],
+	[6, 43, 19, 2, 44, 20],
+	[6, 43, 15, 2, 44, 16],
+
+	// 11
+	[4, 101, 81],
+	[1, 80, 50, 4, 81, 51],
+	[4, 50, 22, 4, 51, 23],
+	[3, 36, 12, 8, 37, 13],
+
+	// 12
+	[2, 116, 92, 2, 117, 93],
+	[6, 58, 36, 2, 59, 37],
+	[4, 46, 20, 6, 47, 21],
+	[7, 42, 14, 4, 43, 15],
+
+	// 13
+	[4, 133, 107],
+	[8, 59, 37, 1, 60, 38],
+	[8, 44, 20, 4, 45, 21],
+	[12, 33, 11, 4, 34, 12],
+
+	// 14
+	[3, 145, 115, 1, 146, 116],
+	[4, 64, 40, 5, 65, 41],
+	[11, 36, 16, 5, 37, 17],
+	[11, 36, 12, 5, 37, 13],
+
+	// 15
+	[5, 109, 87, 1, 110, 88],
+	[5, 65, 41, 5, 66, 42],
+	[5, 54, 24, 7, 55, 25],
+	[11, 36, 12],
+
+	// 16
+	[5, 122, 98, 1, 123, 99],
+	[7, 73, 45, 3, 74, 46],
+	[15, 43, 19, 2, 44, 20],
+	[3, 45, 15, 13, 46, 16],
+
+	// 17
+	[1, 135, 107, 5, 136, 108],
+	[10, 74, 46, 1, 75, 47],
+	[1, 50, 22, 15, 51, 23],
+	[2, 42, 14, 17, 43, 15],
+
+	// 18
+	[5, 150, 120, 1, 151, 121],
+	[9, 69, 43, 4, 70, 44],
+	[17, 50, 22, 1, 51, 23],
+	[2, 42, 14, 19, 43, 15],
+
+	// 19
+	[3, 141, 113, 4, 142, 114],
+	[3, 70, 44, 11, 71, 45],
+	[17, 47, 21, 4, 48, 22],
+	[9, 39, 13, 16, 40, 14],
+
+	// 20
+	[3, 135, 107, 5, 136, 108],
+	[3, 67, 41, 13, 68, 42],
+	[15, 54, 24, 5, 55, 25],
+	[15, 43, 15, 10, 44, 16],
+
+	// 21
+	[4, 144, 116, 4, 145, 117],
+	[17, 68, 42],
+	[17, 50, 22, 6, 51, 23],
+	[19, 46, 16, 6, 47, 17],
+
+	// 22
+	[2, 139, 111, 7, 140, 112],
+	[17, 74, 46],
+	[7, 54, 24, 16, 55, 25],
+	[34, 37, 13],
+
+	// 23
+	[4, 151, 121, 5, 152, 122],
+	[4, 75, 47, 14, 76, 48],
+	[11, 54, 24, 14, 55, 25],
+	[16, 45, 15, 14, 46, 16],
+
+	// 24
+	[6, 147, 117, 4, 148, 118],
+	[6, 73, 45, 14, 74, 46],
+	[11, 54, 24, 16, 55, 25],
+	[30, 46, 16, 2, 47, 17],
+
+	// 25
+	[8, 132, 106, 4, 133, 107],
+	[8, 75, 47, 13, 76, 48],
+	[7, 54, 24, 22, 55, 25],
+	[22, 45, 15, 13, 46, 16],
+
+	// 26
+	[10, 142, 114, 2, 143, 115],
+	[19, 74, 46, 4, 75, 47],
+	[28, 50, 22, 6, 51, 23],
+	[33, 46, 16, 4, 47, 17],
+
+	// 27
+	[8, 152, 122, 4, 153, 123],
+	[22, 73, 45, 3, 74, 46],
+	[8, 53, 23, 26, 54, 24],
+	[12, 45, 15, 28, 46, 16],
+
+	// 28
+	[3, 147, 117, 10, 148, 118],
+	[3, 73, 45, 23, 74, 46],
+	[4, 54, 24, 31, 55, 25],
+	[11, 45, 15, 31, 46, 16],
+
+	// 29
+	[7, 146, 116, 7, 147, 117],
+	[21, 73, 45, 7, 74, 46],
+	[1, 53, 23, 37, 54, 24],
+	[19, 45, 15, 26, 46, 16],
+
+	// 30
+	[5, 145, 115, 10, 146, 116],
+	[19, 75, 47, 10, 76, 48],
+	[15, 54, 24, 25, 55, 25],
+	[23, 45, 15, 25, 46, 16],
+
+	// 31
+	[13, 145, 115, 3, 146, 116],
+	[2, 74, 46, 29, 75, 47],
+	[42, 54, 24, 1, 55, 25],
+	[23, 45, 15, 28, 46, 16],
+
+	// 32
+	[17, 145, 115],
+	[10, 74, 46, 23, 75, 47],
+	[10, 54, 24, 35, 55, 25],
+	[19, 45, 15, 35, 46, 16],
+
+	// 33
+	[17, 145, 115, 1, 146, 116],
+	[14, 74, 46, 21, 75, 47],
+	[29, 54, 24, 19, 55, 25],
+	[11, 45, 15, 46, 46, 16],
+
+	// 34
+	[13, 145, 115, 6, 146, 116],
+	[14, 74, 46, 23, 75, 47],
+	[44, 54, 24, 7, 55, 25],
+	[59, 46, 16, 1, 47, 17],
+
+	// 35
+	[12, 151, 121, 7, 152, 122],
+	[12, 75, 47, 26, 76, 48],
+	[39, 54, 24, 14, 55, 25],
+	[22, 45, 15, 41, 46, 16],
+
+	// 36
+	[6, 151, 121, 14, 152, 122],
+	[6, 75, 47, 34, 76, 48],
+	[46, 54, 24, 10, 55, 25],
+	[2, 45, 15, 64, 46, 16],
+
+	// 37
+	[17, 152, 122, 4, 153, 123],
+	[29, 74, 46, 14, 75, 47],
+	[49, 54, 24, 10, 55, 25],
+	[24, 45, 15, 46, 46, 16],
+
+	// 38
+	[4, 152, 122, 18, 153, 123],
+	[13, 74, 46, 32, 75, 47],
+	[48, 54, 24, 14, 55, 25],
+	[42, 45, 15, 32, 46, 16],
+
+	// 39
+	[20, 147, 117, 4, 148, 118],
+	[40, 75, 47, 7, 76, 48],
+	[43, 54, 24, 22, 55, 25],
+	[10, 45, 15, 67, 46, 16],
+
+	// 40
+	[19, 148, 118, 6, 149, 119],
+	[18, 75, 47, 31, 76, 48],
+	[34, 54, 24, 34, 55, 25],
+	[20, 45, 15, 61, 46, 16]
+];
+
+QRRSBlock.getRSBlocks = function(typeNumber, errorCorrectLevel) {
+	
+	var rsBlock = QRRSBlock.getRsBlockTable(typeNumber, errorCorrectLevel);
+	
+	if (rsBlock === undefined) {
+		throw new Error("bad rs block @ typeNumber:" + typeNumber + "/errorCorrectLevel:" + errorCorrectLevel);
+	}
+
+	var length = rsBlock.length / 3;
+	
+	var list = [];
+	
+	for (var i = 0; i < length; i++) {
+
+		var count = rsBlock[i * 3 + 0];
+		var totalCount = rsBlock[i * 3 + 1];
+		var dataCount  = rsBlock[i * 3 + 2];
+
+		for (var j = 0; j < count; j++) {
+			list.push(new QRRSBlock(totalCount, dataCount) );	
+		}
+	}
+	
+	return list;
+};
+
+QRRSBlock.getRsBlockTable = function(typeNumber, errorCorrectLevel) {
+
+	switch(errorCorrectLevel) {
+	case QRErrorCorrectLevel.L :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+	case QRErrorCorrectLevel.M :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+	case QRErrorCorrectLevel.Q :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+	case QRErrorCorrectLevel.H :
+		return QRRSBlock.RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+	default :
+		return undefined;
+	}
+};
+
+module.exports = QRRSBlock;
+
+},
+'QRUtil': function(require,module,exports){
+var QRMode = require('./QRMode');
+var QRPolynomial = require('./QRPolynomial');
+var QRMath = require('./QRMath');
+var QRMaskPattern = require('./QRMaskPattern');
+
+var QRUtil = {
+
+    PATTERN_POSITION_TABLE : [
+        [],
+        [6, 18],
+        [6, 22],
+        [6, 26],
+        [6, 30],
+        [6, 34],
+        [6, 22, 38],
+        [6, 24, 42],
+        [6, 26, 46],
+        [6, 28, 50],
+        [6, 30, 54],        
+        [6, 32, 58],
+        [6, 34, 62],
+        [6, 26, 46, 66],
+        [6, 26, 48, 70],
+        [6, 26, 50, 74],
+        [6, 30, 54, 78],
+        [6, 30, 56, 82],
+        [6, 30, 58, 86],
+        [6, 34, 62, 90],
+        [6, 28, 50, 72, 94],
+        [6, 26, 50, 74, 98],
+        [6, 30, 54, 78, 102],
+        [6, 28, 54, 80, 106],
+        [6, 32, 58, 84, 110],
+        [6, 30, 58, 86, 114],
+        [6, 34, 62, 90, 118],
+        [6, 26, 50, 74, 98, 122],
+        [6, 30, 54, 78, 102, 126],
+        [6, 26, 52, 78, 104, 130],
+        [6, 30, 56, 82, 108, 134],
+        [6, 34, 60, 86, 112, 138],
+        [6, 30, 58, 86, 114, 142],
+        [6, 34, 62, 90, 118, 146],
+        [6, 30, 54, 78, 102, 126, 150],
+        [6, 24, 50, 76, 102, 128, 154],
+        [6, 28, 54, 80, 106, 132, 158],
+        [6, 32, 58, 84, 110, 136, 162],
+        [6, 26, 54, 82, 110, 138, 166],
+        [6, 30, 58, 86, 114, 142, 170]
+    ],
+
+    G15 : (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0),
+    G18 : (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0),
+    G15_MASK : (1 << 14) | (1 << 12) | (1 << 10)    | (1 << 4) | (1 << 1),
+
+    getBCHTypeInfo : function(data) {
+        var d = data << 10;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) >= 0) {
+            d ^= (QRUtil.G15 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G15) ) );    
+        }
+        return ( (data << 10) | d) ^ QRUtil.G15_MASK;
+    },
+
+    getBCHTypeNumber : function(data) {
+        var d = data << 12;
+        while (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) >= 0) {
+            d ^= (QRUtil.G18 << (QRUtil.getBCHDigit(d) - QRUtil.getBCHDigit(QRUtil.G18) ) );    
+        }
+        return (data << 12) | d;
+    },
+
+    getBCHDigit : function(data) {
+
+        var digit = 0;
+
+        while (data !== 0) {
+            digit++;
+            data >>>= 1;
+        }
+
+        return digit;
+    },
+
+    getPatternPosition : function(typeNumber) {
+        return QRUtil.PATTERN_POSITION_TABLE[typeNumber - 1];
+    },
+
+    getMask : function(maskPattern, i, j) {
+        
+        switch (maskPattern) {
+            
+        case QRMaskPattern.PATTERN000 : return (i + j) % 2 === 0;
+        case QRMaskPattern.PATTERN001 : return i % 2 === 0;
+        case QRMaskPattern.PATTERN010 : return j % 3 === 0;
+        case QRMaskPattern.PATTERN011 : return (i + j) % 3 === 0;
+        case QRMaskPattern.PATTERN100 : return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 === 0;
+        case QRMaskPattern.PATTERN101 : return (i * j) % 2 + (i * j) % 3 === 0;
+        case QRMaskPattern.PATTERN110 : return ( (i * j) % 2 + (i * j) % 3) % 2 === 0;
+        case QRMaskPattern.PATTERN111 : return ( (i * j) % 3 + (i + j) % 2) % 2 === 0;
+
+        default :
+            throw new Error("bad maskPattern:" + maskPattern);
+        }
+    },
+
+    getErrorCorrectPolynomial : function(errorCorrectLength) {
+
+        var a = new QRPolynomial([1], 0);
+
+        for (var i = 0; i < errorCorrectLength; i++) {
+            a = a.multiply(new QRPolynomial([1, QRMath.gexp(i)], 0) );
+        }
+
+        return a;
+    },
+
+    getLengthInBits : function(mode, type) {
+
+        if (1 <= type && type < 10) {
+
+            // 1 - 9
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 10;
+            case QRMode.MODE_ALPHA_NUM  : return 9;
+            case QRMode.MODE_8BIT_BYTE  : return 8;
+            case QRMode.MODE_KANJI      : return 8;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 27) {
+
+            // 10 - 26
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 12;
+            case QRMode.MODE_ALPHA_NUM  : return 11;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 10;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else if (type < 41) {
+
+            // 27 - 40
+
+            switch(mode) {
+            case QRMode.MODE_NUMBER     : return 14;
+            case QRMode.MODE_ALPHA_NUM  : return 13;
+            case QRMode.MODE_8BIT_BYTE  : return 16;
+            case QRMode.MODE_KANJI      : return 12;
+            default :
+                throw new Error("mode:" + mode);
+            }
+
+        } else {
+            throw new Error("type:" + type);
+        }
+    },
+
+    getLostPoint : function(qrCode) {
+        
+        var moduleCount = qrCode.getModuleCount();
+        var lostPoint = 0;
+        var row = 0; 
+        var col = 0;
+
+        
+        // LEVEL1
+        
+        for (row = 0; row < moduleCount; row++) {
+
+            for (col = 0; col < moduleCount; col++) {
+
+                var sameCount = 0;
+                var dark = qrCode.isDark(row, col);
+
+                for (var r = -1; r <= 1; r++) {
+
+                    if (row + r < 0 || moduleCount <= row + r) {
+                        continue;
+                    }
+
+                    for (var c = -1; c <= 1; c++) {
+
+                        if (col + c < 0 || moduleCount <= col + c) {
+                            continue;
+                        }
+
+                        if (r === 0 && c === 0) {
+                            continue;
+                        }
+
+                        if (dark === qrCode.isDark(row + r, col + c) ) {
+                            sameCount++;
+                        }
+                    }
+                }
+
+                if (sameCount > 5) {
+                    lostPoint += (3 + sameCount - 5);
+                }
+            }
+        }
+
+        // LEVEL2
+
+        for (row = 0; row < moduleCount - 1; row++) {
+            for (col = 0; col < moduleCount - 1; col++) {
+                var count = 0;
+                if (qrCode.isDark(row,     col    ) ) count++;
+                if (qrCode.isDark(row + 1, col    ) ) count++;
+                if (qrCode.isDark(row,     col + 1) ) count++;
+                if (qrCode.isDark(row + 1, col + 1) ) count++;
+                if (count === 0 || count === 4) {
+                    lostPoint += 3;
+                }
+            }
+        }
+
+        // LEVEL3
+
+        for (row = 0; row < moduleCount; row++) {
+            for (col = 0; col < moduleCount - 6; col++) {
+                if (qrCode.isDark(row, col) && 
+                        !qrCode.isDark(row, col + 1) && 
+                         qrCode.isDark(row, col + 2) && 
+                         qrCode.isDark(row, col + 3) && 
+                         qrCode.isDark(row, col + 4) && 
+                        !qrCode.isDark(row, col + 5) && 
+                         qrCode.isDark(row, col + 6) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount - 6; row++) {
+                if (qrCode.isDark(row, col) &&
+                        !qrCode.isDark(row + 1, col) &&
+                         qrCode.isDark(row + 2, col) &&
+                         qrCode.isDark(row + 3, col) &&
+                         qrCode.isDark(row + 4, col) &&
+                        !qrCode.isDark(row + 5, col) &&
+                         qrCode.isDark(row + 6, col) ) {
+                    lostPoint += 40;
+                }
+            }
+        }
+
+        // LEVEL4
+        
+        var darkCount = 0;
+
+        for (col = 0; col < moduleCount; col++) {
+            for (row = 0; row < moduleCount; row++) {
+                if (qrCode.isDark(row, col) ) {
+                    darkCount++;
+                }
+            }
+        }
+        
+        var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+        lostPoint += ratio * 10;
+
+        return lostPoint;       
+    }
+
+};
+
+module.exports = QRUtil;
+
+},
+'index': function(require,module,exports){
+//---------------------------------------------------------------------
+// QRCode for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//   http://www.opensource.org/licenses/mit-license.php
+//
+// The word "QR Code" is registered trademark of 
+// DENSO WAVE INCORPORATED
+//   http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+// Modified to work in node for this project (and some refactoring)
+//---------------------------------------------------------------------
+
+var QR8bitByte = require('./QR8bitByte');
+var QRUtil = require('./QRUtil');
+var QRPolynomial = require('./QRPolynomial');
+var QRRSBlock = require('./QRRSBlock');
+var QRBitBuffer = require('./QRBitBuffer');
+
+function QRCode(typeNumber, errorCorrectLevel) {
+	this.typeNumber = typeNumber;
+	this.errorCorrectLevel = errorCorrectLevel;
+	this.modules = null;
+	this.moduleCount = 0;
+	this.dataCache = null;
+	this.dataList = [];
+}
+
+QRCode.prototype = {
+	
+	addData : function(data) {
+		var newData = new QR8bitByte(data);
+		this.dataList.push(newData);
+		this.dataCache = null;
+	},
+	
+	isDark : function(row, col) {
+		if (row < 0 || this.moduleCount <= row || col < 0 || this.moduleCount <= col) {
+			throw new Error(row + "," + col);
+		}
+		return this.modules[row][col];
+	},
+
+	getModuleCount : function() {
+		return this.moduleCount;
+	},
+	
+	make : function() {
+		// Calculate automatically typeNumber if provided is < 1
+		if (this.typeNumber < 1 ){
+			var typeNumber = 1;
+			for (typeNumber = 1; typeNumber < 40; typeNumber++) {
+				var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, this.errorCorrectLevel);
+
+				var buffer = new QRBitBuffer();
+				var totalDataCount = 0;
+				for (var i = 0; i < rsBlocks.length; i++) {
+					totalDataCount += rsBlocks[i].dataCount;
+				}
+
+				for (var x = 0; x < this.dataList.length; x++) {
+					var data = this.dataList[x];
+					buffer.put(data.mode, 4);
+					buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+					data.write(buffer);
+				}
+				if (buffer.getLengthInBits() <= totalDataCount * 8)
+					break;
+			}
+			this.typeNumber = typeNumber;
+		}
+		this.makeImpl(false, this.getBestMaskPattern() );
+	},
+	
+	makeImpl : function(test, maskPattern) {
+		
+		this.moduleCount = this.typeNumber * 4 + 17;
+		this.modules = new Array(this.moduleCount);
+		
+		for (var row = 0; row < this.moduleCount; row++) {
+			
+			this.modules[row] = new Array(this.moduleCount);
+			
+			for (var col = 0; col < this.moduleCount; col++) {
+				this.modules[row][col] = null;//(col + row) % 3;
+			}
+		}
+	
+		this.setupPositionProbePattern(0, 0);
+		this.setupPositionProbePattern(this.moduleCount - 7, 0);
+		this.setupPositionProbePattern(0, this.moduleCount - 7);
+		this.setupPositionAdjustPattern();
+		this.setupTimingPattern();
+		this.setupTypeInfo(test, maskPattern);
+		
+		if (this.typeNumber >= 7) {
+			this.setupTypeNumber(test);
+		}
+	
+		if (this.dataCache === null) {
+			this.dataCache = QRCode.createData(this.typeNumber, this.errorCorrectLevel, this.dataList);
+		}
+	
+		this.mapData(this.dataCache, maskPattern);
+	},
+
+	setupPositionProbePattern : function(row, col)  {
+		
+		for (var r = -1; r <= 7; r++) {
+			
+			if (row + r <= -1 || this.moduleCount <= row + r) continue;
+			
+			for (var c = -1; c <= 7; c++) {
+				
+				if (col + c <= -1 || this.moduleCount <= col + c) continue;
+				
+				if ( (0 <= r && r <= 6 && (c === 0 || c === 6) ) || 
+                     (0 <= c && c <= 6 && (r === 0 || r === 6) ) || 
+                     (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+					this.modules[row + r][col + c] = true;
+				} else {
+					this.modules[row + r][col + c] = false;
+				}
+			}		
+		}		
+	},
+	
+	getBestMaskPattern : function() {
+	
+		var minLostPoint = 0;
+		var pattern = 0;
+	
+		for (var i = 0; i < 8; i++) {
+			
+			this.makeImpl(true, i);
+	
+			var lostPoint = QRUtil.getLostPoint(this);
+	
+			if (i === 0 || minLostPoint >  lostPoint) {
+				minLostPoint = lostPoint;
+				pattern = i;
+			}
+		}
+	
+		return pattern;
+	},
+	
+	createMovieClip : function(target_mc, instance_name, depth) {
+	
+		var qr_mc = target_mc.createEmptyMovieClip(instance_name, depth);
+		var cs = 1;
+	
+		this.make();
+
+		for (var row = 0; row < this.modules.length; row++) {
+			
+			var y = row * cs;
+			
+			for (var col = 0; col < this.modules[row].length; col++) {
+	
+				var x = col * cs;
+				var dark = this.modules[row][col];
+			
+				if (dark) {
+					qr_mc.beginFill(0, 100);
+					qr_mc.moveTo(x, y);
+					qr_mc.lineTo(x + cs, y);
+					qr_mc.lineTo(x + cs, y + cs);
+					qr_mc.lineTo(x, y + cs);
+					qr_mc.endFill();
+				}
+			}
+		}
+		
+		return qr_mc;
+	},
+
+	setupTimingPattern : function() {
+		
+		for (var r = 8; r < this.moduleCount - 8; r++) {
+			if (this.modules[r][6] !== null) {
+				continue;
+			}
+			this.modules[r][6] = (r % 2 === 0);
+		}
+	
+		for (var c = 8; c < this.moduleCount - 8; c++) {
+			if (this.modules[6][c] !== null) {
+				continue;
+			}
+			this.modules[6][c] = (c % 2 === 0);
+		}
+	},
+	
+	setupPositionAdjustPattern : function() {
+	
+		var pos = QRUtil.getPatternPosition(this.typeNumber);
+		
+		for (var i = 0; i < pos.length; i++) {
+		
+			for (var j = 0; j < pos.length; j++) {
+			
+				var row = pos[i];
+				var col = pos[j];
+				
+				if (this.modules[row][col] !== null) {
+					continue;
+				}
+				
+				for (var r = -2; r <= 2; r++) {
+				
+					for (var c = -2; c <= 2; c++) {
+					
+						if (Math.abs(r) === 2 || 
+                            Math.abs(c) === 2 ||
+                            (r === 0 && c === 0) ) {
+							this.modules[row + r][col + c] = true;
+						} else {
+							this.modules[row + r][col + c] = false;
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	setupTypeNumber : function(test) {
+	
+		var bits = QRUtil.getBCHTypeNumber(this.typeNumber);
+        var mod;
+	
+		for (var i = 0; i < 18; i++) {
+			mod = (!test && ( (bits >> i) & 1) === 1);
+			this.modules[Math.floor(i / 3)][i % 3 + this.moduleCount - 8 - 3] = mod;
+		}
+	
+		for (var x = 0; x < 18; x++) {
+			mod = (!test && ( (bits >> x) & 1) === 1);
+			this.modules[x % 3 + this.moduleCount - 8 - 3][Math.floor(x / 3)] = mod;
+		}
+	},
+	
+	setupTypeInfo : function(test, maskPattern) {
+	
+		var data = (this.errorCorrectLevel << 3) | maskPattern;
+		var bits = QRUtil.getBCHTypeInfo(data);
+        var mod;
+	
+		// vertical		
+		for (var v = 0; v < 15; v++) {
+	
+			mod = (!test && ( (bits >> v) & 1) === 1);
+	
+			if (v < 6) {
+				this.modules[v][8] = mod;
+			} else if (v < 8) {
+				this.modules[v + 1][8] = mod;
+			} else {
+				this.modules[this.moduleCount - 15 + v][8] = mod;
+			}
+		}
+	
+		// horizontal
+		for (var h = 0; h < 15; h++) {
+	
+			mod = (!test && ( (bits >> h) & 1) === 1);
+			
+			if (h < 8) {
+				this.modules[8][this.moduleCount - h - 1] = mod;
+			} else if (h < 9) {
+				this.modules[8][15 - h - 1 + 1] = mod;
+			} else {
+				this.modules[8][15 - h - 1] = mod;
+			}
+		}
+	
+		// fixed module
+		this.modules[this.moduleCount - 8][8] = (!test);
+	
+	},
+	
+	mapData : function(data, maskPattern) {
+		
+		var inc = -1;
+		var row = this.moduleCount - 1;
+		var bitIndex = 7;
+		var byteIndex = 0;
+		
+		for (var col = this.moduleCount - 1; col > 0; col -= 2) {
+	
+			if (col === 6) col--;
+	
+			while (true) {
+	
+				for (var c = 0; c < 2; c++) {
+					
+					if (this.modules[row][col - c] === null) {
+						
+						var dark = false;
+	
+						if (byteIndex < data.length) {
+							dark = ( ( (data[byteIndex] >>> bitIndex) & 1) === 1);
+						}
+	
+						var mask = QRUtil.getMask(maskPattern, row, col - c);
+	
+						if (mask) {
+							dark = !dark;
+						}
+						
+						this.modules[row][col - c] = dark;
+						bitIndex--;
+	
+						if (bitIndex === -1) {
+							byteIndex++;
+							bitIndex = 7;
+						}
+					}
+				}
+								
+				row += inc;
+	
+				if (row < 0 || this.moduleCount <= row) {
+					row -= inc;
+					inc = -inc;
+					break;
+				}
+			}
+		}
+		
+	}
+
+};
+
+QRCode.PAD0 = 0xEC;
+QRCode.PAD1 = 0x11;
+
+QRCode.createData = function(typeNumber, errorCorrectLevel, dataList) {
+	
+	var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectLevel);
+	
+	var buffer = new QRBitBuffer();
+	
+	for (var i = 0; i < dataList.length; i++) {
+		var data = dataList[i];
+		buffer.put(data.mode, 4);
+		buffer.put(data.getLength(), QRUtil.getLengthInBits(data.mode, typeNumber) );
+		data.write(buffer);
+	}
+
+	// calc num max data.
+	var totalDataCount = 0;
+	for (var x = 0; x < rsBlocks.length; x++) {
+		totalDataCount += rsBlocks[x].dataCount;
+	}
+
+	if (buffer.getLengthInBits() > totalDataCount * 8) {
+		throw new Error("code length overflow. (" + 
+            buffer.getLengthInBits() + 
+            ">" +  
+            totalDataCount * 8 + 
+            ")");
+	}
+
+	// end code
+	if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+		buffer.put(0, 4);
+	}
+
+	// padding
+	while (buffer.getLengthInBits() % 8 !== 0) {
+		buffer.putBit(false);
+	}
+
+	// padding
+	while (true) {
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD0, 8);
+		
+		if (buffer.getLengthInBits() >= totalDataCount * 8) {
+			break;
+		}
+		buffer.put(QRCode.PAD1, 8);
+	}
+
+	return QRCode.createBytes(buffer, rsBlocks);
+};
+
+QRCode.createBytes = function(buffer, rsBlocks) {
+
+	var offset = 0;
+	
+	var maxDcCount = 0;
+	var maxEcCount = 0;
+	
+	var dcdata = new Array(rsBlocks.length);
+	var ecdata = new Array(rsBlocks.length);
+	
+	for (var r = 0; r < rsBlocks.length; r++) {
+
+		var dcCount = rsBlocks[r].dataCount;
+		var ecCount = rsBlocks[r].totalCount - dcCount;
+
+		maxDcCount = Math.max(maxDcCount, dcCount);
+		maxEcCount = Math.max(maxEcCount, ecCount);
+		
+		dcdata[r] = new Array(dcCount);
+		
+		for (var i = 0; i < dcdata[r].length; i++) {
+			dcdata[r][i] = 0xff & buffer.buffer[i + offset];
+		}
+		offset += dcCount;
+		
+		var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+		var rawPoly = new QRPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+		var modPoly = rawPoly.mod(rsPoly);
+		ecdata[r] = new Array(rsPoly.getLength() - 1);
+		for (var x = 0; x < ecdata[r].length; x++) {
+            var modIndex = x + modPoly.getLength() - ecdata[r].length;
+			ecdata[r][x] = (modIndex >= 0)? modPoly.get(modIndex) : 0;
+		}
+
+	}
+	
+	var totalCodeCount = 0;
+	for (var y = 0; y < rsBlocks.length; y++) {
+		totalCodeCount += rsBlocks[y].totalCount;
+	}
+
+	var data = new Array(totalCodeCount);
+	var index = 0;
+
+	for (var z = 0; z < maxDcCount; z++) {
+		for (var s = 0; s < rsBlocks.length; s++) {
+			if (z < dcdata[s].length) {
+				data[index++] = dcdata[s][z];
+			}
+		}
+	}
+
+	for (var xx = 0; xx < maxEcCount; xx++) {
+		for (var t = 0; t < rsBlocks.length; t++) {
+			if (xx < ecdata[t].length) {
+				data[index++] = ecdata[t][xx];
+			}
+		}
+	}
+
+	return data;
+
+};
+
+module.exports = QRCode;
+
+},
+};
+const cache={};
+function load(name){name=name.replace(/^\.\//,'');if(cache[name])return cache[name].exports;const m={exports:{}};cache[name]=m;if(!factories[name])throw Error('QR module missing '+name);factories[name](load,m,m.exports);return m.exports;}
+return load('index');
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+<script>
+'use strict';
+// KORAK ZA OBJAVU: Upiši URL i PUBLISHABLE (anon) ključ svog Supabase projekta.
+// Nikada ne upisuj "service_role" / secret ključ ovde.
+const ALATKO_CONFIG={
+ supabaseUrl:'',
+ supabasePublishableKey:''
+};
+const $=id=>document.getElementById(id);
+const fmt=n=>Number(n).toLocaleString('sr-RS',{maximumFractionDigits:2});
+const esc=s=>String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+const attrs=s=>esc(s).replace(/`/g,'&#96;');
+const safeStore=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}};
+const readStore=(k,def)=>{try{const t=localStorage.getItem(k);return t?JSON.parse(t):def}catch(e){return def}};
+let toastTimer;
+function toast(s){const e=$('toast');e.textContent=s;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),2500)}
+const toolDefs=[
+ ['cv','📄','CV Studio','Dokumenti','Profesionalni CV sa fotografijom, stilovima i PDF-om.'],
+ ['image','🖼️','Kompresija slika','Slike','Smanji sliku ili promeni njene dimenzije.'],
+ ['qr','▦','QR kod generator','Internet','Pretvori link ili tekst u QR kod i PNG.'],
+ ['text','✍️','Uređivanje teksta','Tekst','Brojanje reči, formatiranje i preuzimanje teksta.'],
+ ['password','🔐','Generator lozinki','Internet','Napravi jaku lozinku u svom pregledaču.'],
+ ['ad','🛍️','Opis za oglas','Tekst','Sastavi pregledan opis proizvoda za prodaju.'],
+ ['todo','✅','Lista zadataka','Produktivnost','Spisak obaveza koji se čuva na uređaju.'],
+ ['picker','🎲','Nasumični izbor','Produktivnost','Izvuci ime, broj ili stavku sa spiska.'],
+ ['days','📅','Brojač dana','Produktivnost','Saznaj broj dana između dva datuma.'],
+ ['colors','🎨','Paleta boja','Slike','Napravi kombinaciju boja za sajt ili dizajn.'],
+ ['fuel','⛽','Trošak goriva','Kalkulatori','Izračunaj gorivo i cenu putovanja.'],
+ ['discount','🏷️','Kalkulator popusta','Kalkulatori','Proveri konačnu cenu posle sniženja.'],
+ ['percentage','％','Kalkulator procenta','Kalkulatori','Koliko iznosi dati procenat od broja?'],
+ ['split','🧾','Podela računa','Kalkulatori','Podeli trošak između više osoba.'],
+ ['travel','🛣️','Vreme putovanja','Kalkulatori','Proceni trajanje puta na osnovu brzine.'],
+ ['grades','🎓','Prosek ocena','Kalkulatori','Unesi ocene i saznaj prosek.'],
+ ['units','📐','Pretvarač jedinica','Kalkulatori','Centimetri, metri, kilometri i milje.'],
+ ['tip','🍽️','Bakšiš i račun','Kalkulatori','Izračunaj bakšiš i podeli račun.']
+].map(([id,icon,title,cat,desc])=>({id,icon,title,cat,desc}));
+const cats=['Svi','Dokumenti','Slike','Tekst','Internet','Produktivnost','Kalkulatori'];
+let filters={home:'Svi',all:'Svi'},searches={home:'',all:''},favorites=readStore('alatko_favorites',[]);
+function go(route){location.hash=route;if(location.hash==='#'+route)navigate()}
+function route(){return decodeURIComponent(location.hash.slice(1)||'home').split('?')[0]}
+function navigate(){let id=route();const page=['home','tools','cv','space','feedback','about'].includes(id)?id:toolDefs.some(x=>x.id===id)?'work':'home';
+ document.querySelectorAll('.page').forEach(p=>p.hidden=p.id!==`page-${page}`);
+ document.querySelectorAll('[data-route]').forEach(b=>b.classList.toggle('active',b.dataset.route===id||b.dataset.route===page&&page!=='work'));
+ if(page==='work')renderTool(id);if(page==='space'){renderFavorites();renderAccountStatus()}if(page==='cv'){drawCV();requestAnimationFrame(fitCVPreview)}if(page==='feedback')refreshReviews();window.scrollTo({top:0,behavior:'instant'});
+}
+window.addEventListener('hashchange',navigate);
+function filterCards(which,cat){filters[which]=cat;renderCards(which)}
+function renderCards(which){const dest=$(which==='home'?'homeGrid':'allGrid');const q=searches[which].toLocaleLowerCase('sr');let items=toolDefs.filter(t=>(filters[which]==='Svi'||t.cat===filters[which])&&`${t.title} ${t.desc} ${t.cat}`.toLocaleLowerCase('sr').includes(q));
+ dest.innerHTML=items.length?items.map(t=>`<article class="tool-card" tabindex="0" role="button" data-open="${t.id}"><div style="display:flex;justify-content:space-between;gap:6px;align-items:flex-start"><span class="tool-icon">${t.icon}</span><button class="icon-btn" title="Omiljeni alat" aria-label="Omiljeni alat" data-favorite="${t.id}" style="border:0;background:transparent;color:#8792b0">${favorites.includes(t.id)?'★':'☆'}</button></div><h3>${t.title}</h3><p>${t.desc}</p><div class="card-foot"><span>${t.cat}</span><b>↗</b></div></article>`).join(''):'<div class="empty-state" style="grid-column:1/-1">Nema alata za ovu pretragu. Probaj drugu reč.</div>';
+ dest.querySelectorAll('[data-open]').forEach(card=>{card.addEventListener('click',e=>{if(e.target.closest('[data-favorite]'))return;go(card.dataset.open)});card.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.target.closest('button'))go(card.dataset.open)})});
+ dest.querySelectorAll('[data-favorite]').forEach(b=>b.addEventListener('click',e=>{e.stopPropagation();toggleFavorite(b.dataset.favorite)}));
+ $(which==='home'?'homeFilters':'allFilters').innerHTML=cats.map(c=>`<button class="chip ${filters[which]===c?'active':''}" data-category="${c}">${c}</button>`).join('');
+ $(which==='home'?'homeFilters':'allFilters').querySelectorAll('[data-category]').forEach(b=>b.addEventListener('click',()=>filterCards(which,b.dataset.category)));
+}
+function toggleFavorite(id){favorites=favorites.includes(id)?favorites.filter(x=>x!==id):[...favorites,id];safeStore('alatko_favorites',favorites);renderCards('home');renderCards('all');toast('Lista omiljenih je ažurirana')}
+function renderFavorites(){const container=$('favoriteList');const favs=toolDefs.filter(t=>favorites.includes(t.id));container.innerHTML=favs.length?favs.map(t=>`<button class="side-link" onclick="go('${t.id}')">${t.icon} ${t.title} ↗</button>`).join(''):'<p class="note">Još nema omiljenih alata.</p>'}
+['home','all'].forEach(which=>{$(which==='home'?'homeSearch':'allSearch').addEventListener('input',e=>{searches[which]=e.target.value;renderCards(which)});renderCards(which)});
+
+/* ===== CV Studio ===== */
+const sampleCV={name:'Ana Petrović',role:'Dizajner',email:'ana@example.com',phone:'060 123 4567',city:'Zagreb',website:'portfolio.example',about:'Kreativna i posvećena dizajnerka sa iskustvom u vizuelnim komunikacijama i radu na digitalnim projektima. Volim jasan dizajn, timski rad i nove izazove.',skills:'Grafički dizajn, Adobe Photoshop, Figma, Komunikacija, Organizacija',languages:'Srpski, Engleski, Francuski',interests:'Fotografija, Putovanja',license:'B kategorija',photo:'',template:'dark',accent:'#56d7e6',showPhoto:true,showLanguages:true,showInterests:true,showLicense:true,experience:[{title:'Grafički dizajner',company:'Studio Kreativa',dates:'2022 – danas',desc:'Izrada promotivnih materijala, digitalnih vizuala i grafičkih rešenja za klijente.'},{title:'Praksa u dizajnu',company:'Creative Lab',dates:'2021 – 2022',desc:'Priprema vizuala za društvene mreže i obrada fotografija.'}],education:[{title:'Dizajn vizuelnih komunikacija',company:'Visoka škola umetnosti',dates:'2018 – 2022',desc:'Studije dizajna i vizuelne komunikacije.'}]};
+const blankCV={name:'',role:'',email:'',phone:'',city:'',website:'',about:'',skills:'',languages:'',interests:'',license:'',photo:'',template:'dark',accent:'#3c6c9a',showPhoto:true,showLanguages:true,showInterests:true,showLicense:true,experience:[],education:[]};
+let cv=readStore('alatko_cv_v4',null)||structuredClone(sampleCV);let cvSaveTimer;
+const cvKeys=['name','role','email','phone','city','website','about','skills','languages','interests','license'];
+function writeCVInputs(){cvKeys.forEach(k=>{const el=document.querySelector(`[data-cv="${k}"]`);if(el)el.value=cv[k]||''});$('cvAccent').value=cv.accent||'#3c6c9a';['showPhoto','showLanguages','showInterests','showLicense'].forEach(k=>{$('cv'+k.charAt(0).toUpperCase()+k.slice(1)).checked=cv[k]!==false});renderCVItems();drawCV();}
+function setCVTemplate(t){cv.template=t;document.querySelectorAll('.template').forEach(b=>b.classList.toggle('active',b.dataset.template===t));updateCV()}
+function cvFields(type,item,i){return `<div class="subform"><div class="subform-head"><b>${type==='experience'?'Iskustvo':'Obrazovanje'} ${i+1}</b><button class="danger-link" onclick="removeCVItem('${type}',${i})">Ukloni ✕</button></div><div class="field"><label>${type==='experience'?'Pozicija':'Škola / smer'}</label><input data-array="${type}" data-index="${i}" data-prop="title" value="${attrs(item.title||'')}" placeholder="${type==='experience'?'Grafički dizajner':'Naziv škole'}"></div><div class="field"><label>${type==='experience'?'Firma / organizacija':'Ustanova'}</label><input data-array="${type}" data-index="${i}" data-prop="company" value="${attrs(item.company||'')}" placeholder="Naziv"></div><div class="field"><label>Period</label><input data-array="${type}" data-index="${i}" data-prop="dates" value="${attrs(item.dates||'')}" placeholder="2022 – danas"></div><div class="field"><label>Opis</label><textarea rows="3" data-array="${type}" data-index="${i}" data-prop="desc" placeholder="Ukratko opiši...">${esc(item.desc||'')}</textarea></div></div>`}
+function renderCVItems(){['experience','education'].forEach(type=>{$(type+'Items').innerHTML=(cv[type]||[]).map((item,i)=>cvFields(type,item,i)).join('')||'<p class="note">Još ništa nije dodato.</p>'});document.querySelectorAll('.template').forEach(b=>b.classList.toggle('active',b.dataset.template===(cv.template||'dark')))}
+function addCVItem(type){cv[type].push({title:'',company:'',dates:'',desc:''});renderCVItems();updateCV()}
+function removeCVItem(type,i){cv[type].splice(i,1);renderCVItems();updateCV()}
+function loadSampleCV(){if(!confirm('Učitati primer? Trenutni podaci u editoru će biti zamenjeni.'))return;cv=structuredClone(sampleCV);writeCVInputs();updateCV();toast('Primer CV-ja je učitan')}
+function clearCV(){if(!confirm('Da li želiš da obrišeš CV i sačuvanu fotografiju?'))return;cv=structuredClone(blankCV);writeCVInputs();updateCV();toast('CV je obrisan')}
+function saveCV(showToast=false){let ok=safeStore('alatko_cv_v4',cv);$('cvSaveStatus').textContent=ok?'Sačuvano na ovom uređaju':'Nije moguće sačuvati (prostor pregledača)';if(showToast)toast(ok?'CV je sačuvan na ovom uređaju':'Čuvanje nije uspelo')}
+function updateCV(){drawCV();$('cvSaveStatus').textContent='Čuvanje...';clearTimeout(cvSaveTimer);cvSaveTimer=setTimeout(()=>saveCV(false),350)}
+$('cvInputs').addEventListener('input',e=>{let el=e.target;if(el.dataset.cv){cv[el.dataset.cv]=el.value;updateCV()}else if(el.dataset.array){cv[el.dataset.array][Number(el.dataset.index)][el.dataset.prop]=el.value;updateCV()}else if(el.id==='cvAccent'){cv.accent=el.value;updateCV()}else if(el.type==='checkbox'&&el.id.startsWith('cvShow')){let key=el.id.slice(2);key=key.charAt(0).toLowerCase()+key.slice(1);cv[key]=el.checked;updateCV()}});
+$('cvPhoto').addEventListener('change',event=>{let f=event.target.files[0];if(!f)return;if(!/^image\/(jpeg|png|webp)$/.test(f.type)){toast('Izaberi JPG, PNG ili WebP');return}if(f.size>8*1024*1024){toast('Fotografija mora biti manja od 8 MB');return}const url=URL.createObjectURL(f),img=new Image();img.onload=()=>{const s=Math.min(img.width,img.height),c=document.createElement('canvas');c.width=c.height=500;c.getContext('2d').drawImage(img,(img.width-s)/2,(img.height-s)/2,s,s,0,0,500,500);cv.photo=c.toDataURL('image/jpeg',.82);URL.revokeObjectURL(url);event.target.value='';updateCV();toast('Fotografija je dodata')};img.onerror=()=>{URL.revokeObjectURL(url);toast('Slika se ne može otvoriti')};img.src=url});
+function removeCVPhoto(){cv.photo='';updateCV();toast('Fotografija je uklonjena')}
+const lines=s=>String(s||'').split(',').map(x=>x.trim()).filter(Boolean);
+function cvSection(title,html){return html?`<section class="cv-main-section"><h4>${title}</h4>${html}</section>`:''}
+function fitCVPreview(){const outer=$('cvSheetOuter'),paper=$('cvPaper');if(!outer||!paper||outer.clientWidth===0)return;paper.style.zoom=1;const css=getComputedStyle(outer);const available=outer.clientWidth-parseFloat(css.paddingLeft)-parseFloat(css.paddingRight)-2;paper.style.zoom=String(Math.min(1,available/paper.offsetWidth));}
+window.addEventListener('resize',fitCVPreview);
+function drawCV(){
+ const p=$('cvPaper');if(!p)return;p.dataset.template=cv.template||'dark';p.style.setProperty('--accent',cv.accent||'#59d9e8');
+ const thumb=$('cvPhotoThumb');if(thumb)thumb.outerHTML=cv.photo?`<img id="cvPhotoThumb" class="cv-photo-thumb" alt="Tvoja fotografija" src="${cv.photo}">`:'<div id="cvPhotoThumb" class="cv-photo-thumb placeholder">👤</div>';
+ const photopart=cv.showPhoto!==false?(cv.photo?`<img class="cv-resume-portrait" alt="Fotografija za CV" src="${cv.photo}">`:`<div class="cv-resume-initial">${esc((cv.name||'?').trim().slice(0,1).toUpperCase())}</div>`):'<div class="cv-resume-initial">✦</div>';
+ $('cvHeroPhoto').innerHTML=photopart;$('cvHeadName').textContent=cv.name||'Tvoje ime i prezime';$('cvHeadRole').textContent=cv.role||'Zanimanje / pozicija';
+ const contact=[['📍',cv.city],['☎',cv.phone],['✉',cv.email],['↗',cv.website]].filter(x=>x[1]).map(([icon,text])=>`<div class="cv-small"><span>${icon}</span>${esc(text)}</div>`).join('');
+ const skills=lines(cv.skills).map(s=>`<div class="cv-skill"><div class="cv-skill-name">✓ ${esc(s)}</div></div>`).join('');
+ const side=[contact?`<section class="cv-side-section"><h4>Kontakt</h4>${contact}</section>`:'',skills?`<section class="cv-side-section"><h4>Veštine</h4>${skills}</section>`:'',cv.showLanguages!==false&&cv.languages?`<section class="cv-side-section"><h4>Jezici</h4><p>${esc(lines(cv.languages).join(' • '))}</p></section>`:'',cv.showLicense!==false&&cv.license?`<section class="cv-side-section"><h4>Vozačka dozvola</h4><p>${esc(cv.license)}</p></section>`:'',cv.showInterests!==false&&cv.interests?`<section class="cv-side-section"><h4>Interesovanja</h4><p>${esc(lines(cv.interests).join(' • '))}</p></section>`:''];
+ $('cvSidebar').innerHTML=side.filter(Boolean).join('')||'<section class="cv-side-section"><h4>O meni</h4><p>Ovaj deo se popunjava automatski.</p></section>';
+ const entries=type=>(cv[type]||[]).filter(x=>Object.values(x).some(Boolean)).map(x=>`<div class="cv-entry"><div class="cv-entry-head"><b>${esc(x.title)}</b><span>${esc(x.dates)}</span></div>${x.company?`<div class="cv-entry-company">${esc(x.company)}</div>`:''}${x.desc?`<p>${esc(x.desc)}</p>`:''}</div>`).join('');
+ const about=esc(cv.about||'');
+ $('cvMaincol').innerHTML=cvSection('Profesionalni profil',about?`<p>${about}</p>`:'')+cvSection('Radno iskustvo',entries('experience'))+cvSection('Obrazovanje',entries('education'));
+ requestAnimationFrame(fitCVPreview);
+}
+function printCV(){if(!cv.name.trim()){toast('Unesi ime i prezime pre čuvanja');go('cv');return}saveCV();window.print()}
+writeCVInputs();
+
+/* ===== Extra tools (rendered only on opening tool) ===== */
+const input=(id,label,value='',type='text',extra='')=>`<div class="field"><label for="${id}">${label}</label><input id="${id}" type="${type}" value="${attrs(value)}" ${extra}></div>`;
+const textarea=(id,label,placeholder='',rows=5)=>`<div class="field"><label for="${id}">${label}</label><textarea id="${id}" rows="${rows}" placeholder="${attrs(placeholder)}"></textarea></div>`;
+const primary=(label,click)=>`<button class="button primary" onclick="${click}">${label}</button>`;
+const output=()=>'<div class="result" id="toolResult" hidden></div>';
+const workViews={
+ image:()=>`<h3>🖼️ Smanji veličinu slike</h3><div class="eyeline">Slika se obrađuje na tvom uređaju i ne šalje se nigde.</div><div class="field"><label for="photoInput">Izaberi sliku</label><input type="file" id="photoInput" accept="image/png,image/jpeg,image/webp,image/bmp"></div><div class="form-pair"><div class="field"><label for="imageQuality">Kvalitet — <span id="imageQualityLabel">75%</span></label><input type="range" id="imageQuality" min="30" max="95" value="75" oninput="$('imageQualityLabel').textContent=this.value+'%'" style="width:100%;accent-color:#586dff"></div><div class="field"><label for="imageMaxWidth">Maksimalna širina / visina</label><select id="imageMaxWidth"><option value="1000">1000 px</option><option value="1600" selected>1600 px</option><option value="2200">2200 px</option><option value="4000">4000 px</option></select></div></div><div class="form-pair"><div class="field"><label for="imageFormat">Izlazni format</label><select id="imageFormat"><option value="image/jpeg">JPG</option><option value="image/webp">WebP</option></select></div></div>${primary('Smanji sliku ↗','compressImage()')}${output()}`,
+ qr:()=>`<h3>▦ Generiši QR kod</h3>${input('qrInput','Link ili tekst','https://alatko.rs','','maxlength="600"')}<div class="form-actions">${primary('Napravi QR kod ↗','createQR()')}<button class="button" onclick="saveQR()">⬇ Preuzmi PNG</button></div><div class="result" id="toolResult" hidden><div class="qr-result"><canvas id="qrCanvas" width="280" height="280"></canvas></div><p class="note">QR kod se generiše direktno na tvom računaru.</p></div>`,
+ text:()=>`<h3>✍️ Uređivanje i brojanje teksta</h3>${textarea('textContent','Unesi ili nalepi tekst','Napiši ili nalepi tekst ovde...',9)}<div class="text-metrics"><div class="metric"><b id="wordsCount">0</b><span>Reči</span></div><div class="metric"><b id="charsCount">0</b><span>Karaktera</span></div><div class="metric"><b id="linesCount">0</b><span>Redova</span></div></div><div class="form-actions">${primary('Sredi razmake','changeText("clean")')}<button class="button" onclick="changeText('upper')">VELIKA SLOVA</button><button class="button" onclick="changeText('lower')">mala slova</button><button class="button" onclick="copyField('textContent')">Kopiraj</button><button class="button" onclick="saveTextFile()">⬇ TXT</button></div>`,
+ password:()=>`<h3>🔐 Generator sigurnih lozinki</h3><div class="form-pair"><div class="field"><label for="pwdLength">Dužina</label><select id="pwdLength"><option>12</option><option selected>16</option><option>20</option><option>24</option><option>32</option></select></div><div class="field"><label for="pwdMode">Tip znakova</label><select id="pwdMode"><option value="full">Slova, brojevi i simboli</option><option value="simple">Slova i brojevi</option></select></div></div><div class="form-actions">${primary('Generiši jaku lozinku ↗','makePassword()')}<button class="button" onclick="copyPassword()">Kopiraj</button></div>${output()}<p class="note">Lozinka nastaje lokalno korišćenjem bezbednog generatora slučajnih brojeva. Za važne naloge uključi dvofaktorsku zaštitu.</p>`,
+ ad:()=>`<h3>🛍️ Generator opisa za oglas</h3><div class="form-pair">${input('adTitle','Šta prodaješ?','')}${input('adPrice','Cena','')}</div><div class="form-pair">${input('adCondition','Stanje','')}${input('adCity','Lokacija','')}</div>${textarea('adDetails','Detalji proizvoda','Npr. godina, veličina, specifikacije, šta dolazi uz proizvod...',4)}<div class="form-actions">${primary('Napravi opis ↗','makeAd()')}<button class="button" onclick="copyGenerated()">Kopiraj opis</button></div>${output()}<p class="note">Ovaj alat slaže unete informacije u pregledan opis. Nije povezan sa AI servisom.</p>`,
+ todo:()=>`<h3>✅ Moja lista zadataka</h3><div style="display:flex;gap:9px"><input class="base" id="taskInput" placeholder="Novi zadatak..." maxlength="140"><button class="button primary" onclick="addTask()">+ Dodaj</button></div><div id="taskList" style="margin-top:15px"></div><p class="note">Zadaci se čuvaju samo u ovom pregledaču.</p>`,
+ picker:()=>`<h3>🎲 Nasumični izbor</h3><p class="note">Unesi opcije — po jednu u svakom redu. Pogodno za žreb, igre i odluke.</p>${textarea('pickList','Opcije','Film\nSerija\nIgrica',7)}${primary('Izvuci jednu opciju ↗','randomPick()')}${output()}`,
+ days:()=>`<h3>📅 Brojač dana</h3><div class="form-pair">${input('dateStart','Datum od',new Date().toISOString().slice(0,10),'date')}${input('dateEnd','Datum do','','date')}</div>${primary('Izračunaj broj dana ↗','countDays()')}${output()}`,
+ colors:()=>`<h3>🎨 Generator palete boja</h3><p class="note">Napravi pet nijansi za dizajn i kopiraj HEX kodove.</p><div class="form-actions">${primary('Generiši boje ↗','makeColors()')}<button class="button" onclick="copyGenerated()">Kopiraj kodove</button></div>${output()}`,
+ fuel:()=>`<h3>⛽ Trošak goriva</h3><div class="form-pair">${input('fuelDistance','Dužina puta (km)','250','number','min="0" step="any"')}${input('fuelConsumption','Potrošnja (L/100 km)','6.5','number','min="0" step="any"')}${input('fuelPrice','Cena goriva (RSD/L)','205','number','min="0" step="any"')}${input('fuelPeople','Broj osoba','2','number','min="1" step="1"')}</div>${primary('Izračunaj trošak ↗','calculate("fuel")')}${output()}`,
+ discount:()=>`<h3>🏷️ Kalkulator popusta</h3><div class="form-pair">${input('originalPrice','Početna cena','5000','number','min="0" step="any"')}${input('discountPercent','Popust (%)','20','number','min="0" max="100" step="any"')}</div>${primary('Izračunaj cenu ↗','calculate("discount")')}${output()}`,
+ percentage:()=>`<h3>％ Izračunaj procenat</h3><div class="form-pair">${input('percentNumber','Broj','2500','number','step="any"')}${input('percentValue','Procenat (%)','15','number','step="any"')}</div>${primary('Izračunaj ↗','calculate("percentage")')}${output()}`,
+ split:()=>`<h3>🧾 Podela računa</h3><div class="form-pair">${input('totalBill','Ukupan račun (RSD)','6000','number','min="0" step="any"')}${input('splitPeople','Broj osoba','3','number','min="1" step="1"')}</div>${primary('Podeli račun ↗','calculate("split")')}${output()}`,
+ travel:()=>`<h3>🛣️ Vreme putovanja</h3><div class="form-pair">${input('travelKm','Udaljenost (km)','250','number','min="0" step="any"')}${input('travelSpeed','Prosečna brzina (km/h)','80','number','min="0" step="any"')}</div>${primary('Izračunaj vreme ↗','calculate("travel")')}${output()}<p class="note">Procena ne uključuje gužve, zastoje i pauze.</p>`,
+ grades:()=>`<h3>🎓 Prosek ocena</h3>${textarea('gradeList','Ocene odvojene zarezom','5, 4, 5, 3, 4',3)}${primary('Izračunaj prosek','calculate("grades")')}${output()}<p class="note">Unesi školske ocene od 1 do 5.</p>`,
+ units:()=>`<h3>📐 Pretvarač jedinica</h3><div class="form-pair">${input('unitValue','Broj','100','number','step="any"')}<div class="field"><label>Izaberi pretvaranje</label><select id="unitType"><option value="cm-m">Centimetri → metri</option><option value="m-cm">Metri → centimetri</option><option value="km-mi">Kilometri → milje</option><option value="mi-km">Milje → kilometri</option></select></div></div>${primary('Pretvori','calculate("units")')}${output()}`,
+ tip:()=>`<h3>🍽️ Bakšiš i račun</h3><div class="form-pair">${input('tipBill','Račun (RSD)','3000','number','min="0"')}${input('tipPercent','Bakšiš (%)','10','number','min="0" max="100"')}${input('tipPeople','Broj osoba','2','number','min="1" step="1"')}</div>${primary('Izračunaj','calculate("tip")')}${output()}`
+};
+let currentTool='image',generatedText='',passwordValue='';
+function renderTool(id){const def=toolDefs.find(x=>x.id===id);if(!def)return;currentTool=id;$('workCrumb').textContent=def.title;$('workHeading').textContent=def.icon+' '+def.title;$('workSubtitle').textContent=def.desc;$('toolWorkspace').innerHTML=(workViews[id]||(()=>'<p>Alat uskoro.</p>'))();if(id==='todo')renderTasks();if(id==='text')$('textContent').addEventListener('input',updateTextCounts)}
+function showResult(big,sub=''){$('toolResult').hidden=false;$('toolResult').innerHTML=`<strong>${esc(big)}</strong>${sub?`<p>${esc(sub)}</p>`:''}`}
+function readNum(id){const input=$(id);let n=Number(input.value);return input.value.trim()===''||!Number.isFinite(n)?NaN:n}
+function calculate(type){let a,b,c,d,result,sub='';switch(type){case 'fuel':a=readNum('fuelDistance');b=readNum('fuelConsumption');c=readNum('fuelPrice');d=readNum('fuelPeople');if([a,b,c,d].some(x=>!Number.isFinite(x)||x<0)||!Number.isInteger(d)||d<1){toast('Proveri unete vrednosti');return}let liters=a*b/100,total=liters*c;result=`${fmt(total)} RSD`;sub=`Oko ${fmt(liters)} L goriva · Po osobi ${fmt(total/d)} RSD`;break;
+case 'discount':a=readNum('originalPrice');b=readNum('discountPercent');if(!Number.isFinite(a)||!Number.isFinite(b)||a<0||b<0||b>100){toast('Unesi ispravnu cenu i popust od 0 do 100%');return}result=`${fmt(a*(1-b/100))} RSD`;sub=`Ušteda: ${fmt(a*b/100)} RSD`;break;
+case 'percentage':a=readNum('percentNumber');b=readNum('percentValue');if(!Number.isFinite(a)||!Number.isFinite(b)){toast('Proveri unete vrednosti');return}result=fmt(a*b/100);sub=`${fmt(b)}% od ${fmt(a)}`;break;
+case 'split':a=readNum('totalBill');b=readNum('splitPeople');if(!Number.isFinite(a)||a<0||!Number.isInteger(b)||b<1){toast('Proveri račun i broj osoba');return}result=`${fmt(a/b)} RSD po osobi`;sub=`Ukupno ${fmt(a)} RSD za ${b} osoba`;break;
+case 'travel':a=readNum('travelKm');b=readNum('travelSpeed');if(!Number.isFinite(a)||a<0||!Number.isFinite(b)||b<=0){toast('Proveri udaljenost i brzinu');return}let mins=Math.round(a/b*60);result=`${Math.floor(mins/60)} h ${mins%60} min`;sub='Približno vreme putovanja bez pauza';break;
+case 'grades':{let g=$('gradeList').value.trim().split(/[\s,;]+/).filter(Boolean).map(Number);if(!g.length||g.some(x=>!Number.isInteger(x)||x<1||x>5)){toast('Unesi ocene od 1 do 5');return}result=fmt(g.reduce((s,x)=>s+x,0)/g.length);sub=`Prosek od ${g.length} ocena`;break;}
+case 'units':{let v=readNum('unitValue'),t=$('unitType').value;if(!Number.isFinite(v)){toast('Unesi broj');return}let k=t==='cm-m'?.01:t==='m-cm'?100:t==='km-mi'?1/1.609344:1.609344;result=`${fmt(v*k)} ${t==='cm-m'?'m':t==='m-cm'?'cm':t==='km-mi'?'mi':'km'}`;break;}
+case 'tip':{a=readNum('tipBill');b=readNum('tipPercent');c=readNum('tipPeople');if(!Number.isFinite(a)||a<0||!Number.isFinite(b)||b<0||b>100||!Number.isInteger(c)||c<1){toast('Proveri račun, procenat i broj osoba');return}let tipAmount=a*b/100,total=a+tipAmount;result=`${fmt(total/c)} RSD po osobi`;sub=`Bakšiš ${fmt(tipAmount)} RSD · Ukupno ${fmt(total)} RSD`;break;}default:return}showResult(result,sub)}
+function updateTextCounts(){let s=$('textContent').value;$('wordsCount').textContent=s.trim()?s.trim().split(/\s+/).length:0;$('charsCount').textContent=s.length;$('linesCount').textContent=s?s.split(/\r?\n/).length:0}
+function changeText(kind){let e=$('textContent');if(kind==='upper')e.value=e.value.toLocaleUpperCase('sr');else if(kind==='lower')e.value=e.value.toLocaleLowerCase('sr');else e.value=e.value.replace(/[ \t]+/g,' ').replace(/\n[ \t]+/g,'\n').replace(/\n{3,}/g,'\n\n').trim();updateTextCounts()}
+async function copyText(s){if(!s){toast('Nema teksta za kopiranje');return}try{await navigator.clipboard.writeText(s);toast('Kopirano!')}catch(e){toast('Za kopiranje označi tekst i pritisni Ctrl+C')}}
+function copyField(id){copyText($(id).value)}function copyGenerated(){copyText(generatedText)}function copyPassword(){copyText(passwordValue)}
+function downloadBlob(blob,name){let url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),10000)}
+function saveTextFile(){const text=$('textContent').value;if(!text){toast('Unesi tekst');return}downloadBlob(new Blob([text],{type:'text/plain;charset=utf-8'}),'alatko-tekst.txt')}
+function compressImage(){const f=$('photoInput').files[0];if(!f){toast('Prvo izaberi fotografiju');return}if(!f.type.startsWith('image/')||f.size>30*1024*1024){toast('Izaberi sliku do 30 MB');return}let url=URL.createObjectURL(f),img=new Image();img.onload=()=>{let max=Number($('imageMaxWidth').value),ratio=Math.min(1,max/Math.max(img.width,img.height)),c=document.createElement('canvas');c.width=Math.max(1,Math.round(img.width*ratio));c.height=Math.max(1,Math.round(img.height*ratio));let ctx=c.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,c.width,c.height);ctx.drawImage(img,0,0,c.width,c.height);c.toBlob(blob=>{URL.revokeObjectURL(url);if(!blob){toast('Slika se ne može obraditi');return}let ext=$('imageFormat').value==='image/webp'?'webp':'jpg';showResult(`${fmt(f.size/1024)} KB → ${fmt(blob.size/1024)} KB`,`Nove dimenzije: ${c.width} × ${c.height}px`);const b=document.createElement('button');b.className='button primary';b.style.marginTop='14px';b.textContent='⬇ Preuzmi novu sliku';b.onclick=()=>downloadBlob(blob,'alatko-slika.'+ext);$('toolResult').appendChild(b)},$('imageFormat').value,Number($('imageQuality').value)/100)};img.onerror=()=>{URL.revokeObjectURL(url);toast('Neispravan format slike')};img.src=url}
+function createQR(){const s=$('qrInput').value.trim();if(!s){toast('Unesi link ili tekst');return}try{let qr=new QRCodeVendor(-1,0);let bytes=new TextEncoder().encode(s);qr.addData(Array.from(bytes,b=>String.fromCharCode(b)).join(''));qr.make();let count=qr.getModuleCount(),cv=$('qrCanvas');$('toolResult').hidden=false;let size=8;cv.width=cv.height=(count+8)*size;cv.style.width='min(280px,100%)';cv.style.height='auto';const ctx=cv.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,cv.width,cv.height);ctx.fillStyle='#121a28';for(let r=0;r<count;r++)for(let c=0;c<count;c++)if(qr.isDark(r,c))ctx.fillRect((c+4)*size,(r+4)*size,size,size);toast('QR kod je spreman')}catch(e){toast('Tekst je predugačak ili QR nije dostupan')}}
+function saveQR(){if($('toolResult').hidden){toast('Prvo napravi QR kod');return}$('qrCanvas').toBlob(blob=>{if(blob)downloadBlob(blob,'alatko-qr.png')})}
+function randomIndex(max){let limit=Math.floor(4294967296/max)*max,n;do{n=new Uint32Array(1);crypto.getRandomValues(n);n=n[0]}while(n>=limit);return n%max}
+function makePassword(){try{let len=Number($('pwdLength').value),simple=$('pwdMode').value==='simple';const pools=['abcdefghjkmnpqrstuvwxyz','ABCDEFGHJKMNPQRSTUVWXYZ','23456789',...(simple?[]:['!@#$%&*?'])],all=pools.join(''),p=pools.map(x=>x[randomIndex(x.length)]);while(p.length<len)p.push(all[randomIndex(all.length)]);for(let i=p.length-1;i>0;i--){let j=randomIndex(i+1);[p[i],p[j]]=[p[j],p[i]]}passwordValue=p.join('');showResult(passwordValue,'Lozinku sačuvaj u svom menadžeru lozinki.')}catch(e){toast('Bezbedni generator nije dostupan u ovom okruženju')}}
+function makeAd(){let title=$('adTitle').value.trim();if(!title){toast('Prvo napiši šta prodaješ');return}const p=$('adPrice').value.trim(),s=$('adCondition').value.trim(),city=$('adCity').value.trim(),details=$('adDetails').value.trim();generatedText=`Prodajem: ${title}\n${s?'Stanje: '+s+'\n':''}${details?details+'\n':''}${p?'Cena: '+p+'\n':''}${city?'Lokacija: '+city+'\n':''}Za više informacija pošaljite poruku.`;showResult(title,generatedText)}
+let tasks=readStore('alatko_tasks',[]);function renderTasks(){const el=$('taskList');if(!el)return;el.innerHTML=tasks.length?tasks.map((t,i)=>`<div class="todo-item ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} aria-label="Završen zadatak" onchange="setTaskDone(${i},this.checked)"><span>${esc(t.text)}</span><button aria-label="Obriši zadatak" onclick="deleteTask(${i})">✕</button></div>`).join(''):'<p class="note">Nema zadataka. Dodaj prvi!</p>'}
+function addTask(){let txt=$('taskInput').value.trim();if(!txt)return;tasks.push({text:txt,done:false});safeStore('alatko_tasks',tasks);$('taskInput').value='';renderTasks()}function setTaskDone(i,done){tasks[i].done=done;safeStore('alatko_tasks',tasks);renderTasks()}function deleteTask(i){tasks.splice(i,1);safeStore('alatko_tasks',tasks);renderTasks()}
+function randomPick(){let arr=$('pickList').value.split(/\r?\n/).map(x=>x.trim()).filter(Boolean);if(!arr.length){toast('Unesi bar jednu stavku');return}showResult(arr[randomIndex(arr.length)],`Izabrano među ${arr.length} opcija`)}
+function countDays(){let a=$('dateStart').value,b=$('dateEnd').value;if(!a||!b){toast('Izaberi oba datuma');return}let d=Math.round(Math.abs(new Date(a+'T12:00:00Z')-new Date(b+'T12:00:00Z'))/86400000);showResult(`${fmt(d)} dana`,`${a} – ${b}`)}
+function makeColors(){const out=$('toolResult');out.hidden=false;let palette=Array.from({length:5},()=>{let chars='0123456789ABCDEF';return '#'+Array.from({length:6},()=>chars[randomIndex(16)]).join('')});generatedText=palette.join(', ');out.innerHTML=`<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:7px">${palette.map(c=>`<div style="min-width:0"><div style="background:${c};height:105px;border-radius:9px"></div><div style="font-size:11px;margin-top:6px;overflow:hidden">${c}</div></div>`).join('')}</div>`}
+$('personalNote').value=readStore('alatko_note','');$('personalNote').addEventListener('input',e=>safeStore('alatko_note',e.target.value));function clearNotes(){if(!confirm('Obrisati sve beleške?'))return;$('personalNote').value='';safeStore('alatko_note','');toast('Beleške su obrisane')}
+$('currentYear').textContent=new Date().getFullYear();navigate();
+
+/* Account setup: Supabase Auth + RLS, no passwords stored in this file. */
+let supa=null, signedInUser=null, isDemo=false,authMode='signup',submittingReview=false;
+const hasBackend=()=>/^https:\/\/[a-z0-9-]+\.supabase\.co\/?$/i.test(ALATKO_CONFIG.supabaseUrl.trim())&&ALATKO_CONFIG.supabasePublishableKey.trim().length>20;
+function renderAccountStatus(){const node=$('accountState');if(!node)return;node.textContent=isDemo?'Demo režim (bez pravog naloga)':signedInUser?`Prijavljen kao ${signedInUser.email}`:'Nisi prijavljen';$('logoutButton').textContent=isDemo?'Izađi iz demoa':'Odjavi se'}
+function setGate(open){$('authGate').hidden=!open;document.body.style.overflow=open?'hidden':''}
+function showAuthMode(mode){authMode=mode;let sign=mode==='signup';document.querySelectorAll('.auth-switch button').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));$('authNameWrap').hidden=!sign;$('authRepeatWrap').hidden=!sign;$('authTitle').textContent=sign?'Napravi nalog i kreni.':'Prijavi se na ALATKO.';$('authEyebrow').textContent=sign?'NOVI KORISNIK':'DOBRO DOŠAO NAZAD';$('authSubmit').textContent=sign?'Napravi nalog →':'Prijavi se →';$('authPassword').autocomplete=sign?'new-password':'current-password';$('forgotButton').hidden=sign;$('authError').textContent=''}
+function enterDemo(){if(hasBackend()){toast('Prijavi se ili napravi nalog da nastaviš');return}isDemo=true;setGate(false);renderAccountStatus();refreshReviews();toast('Demo režim: testiranje bez pravih naloga')}
+async function setupAuth(){
+ setGate(true);showAuthMode('signup');
+ if(!hasBackend()){$('authDemo').hidden=false;return}
+ $('authDemo').hidden=true;$('authPrivacy').textContent='Prijava se obavlja preko Supabase sistema. ALATKO ne čuva tvoju lozinku u samom HTML fajlu.';$('authError').textContent='Povezivanje sa sistemom za prijavu...';
+ // Optional hosted SDK; login is required when configured. The site remains locked on failure.
+ for(let tries=0;tries<25&&!window.supabase;tries++)await new Promise(r=>setTimeout(r,130));
+ if(!window.supabase){$('authError').textContent='Sistem za prijavu trenutno nije dostupan. Proveri internet vezu.';return}
+ try{
+  supa=window.supabase.createClient(ALATKO_CONFIG.supabaseUrl.trim().replace(/\/$/,''),ALATKO_CONFIG.supabasePublishableKey.trim(),{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+  supa.auth.onAuthStateChange((event,session)=>{
+   signedInUser=session?.user||null;isDemo=false;
+   if(event==='PASSWORD_RECOVERY'){showRecoveryForm();return}
+   if(!$('recoveryPanel').hidden)return;
+   setGate(!signedInUser);renderAccountStatus();if(signedInUser)refreshReviews()
+  });
+  const {data,error}=await supa.auth.getSession();if(error)throw error;signedInUser=data.session?.user||null;setGate(!signedInUser);renderAccountStatus();$('authError').textContent='';
+ }catch(err){$('authError').textContent='Greška sa povezivanjem: '+(err?.message||'proveri podešavanja')}
+}
+async function handleAuth(event){event.preventDefault();if(!supa){$('authError').textContent='Registracija nije povezana. Za test klikni „Pogledaj demo verziju“. Za prave naloge poveži Supabase.';return}
+ const mail=$('authEmail').value.trim(),pwd=$('authPassword').value,name=$('authName').value.trim(),errBox=$('authError');
+ if(pwd.length<8){errBox.textContent='Lozinka mora imati najmanje 8 karaktera.';return}
+ if(authMode==='signup'&&!name){errBox.textContent='Unesi ime ili nadimak.';return}
+ if(authMode==='signup'&&pwd!==$('authRepeat').value){errBox.textContent='Lozinke nisu iste.';return}
+ const btn=$('authSubmit');btn.disabled=true;btn.textContent='Povezivanje...';errBox.textContent='';
+ try{
+  if(authMode==='signup'){
+   const {data,error}=await supa.auth.signUp({email:mail,password:pwd,options:{data:{display_name:name.slice(0,35)}}});if(error)throw error;
+   if(data.session){signedInUser=data.user;setGate(false);renderAccountStatus();toast('Nalog je napravljen!')}else{errBox.textContent='Proveri email i potvrdi registraciju, pa se prijavi.';showAuthMode('signin');errBox.textContent='Proveri email i potvrdi registraciju, pa se prijavi.'}
+  }else{const {data,error}=await supa.auth.signInWithPassword({email:mail,password:pwd});if(error)throw error;signedInUser=data.user;setGate(false);renderAccountStatus();toast('Uspešno si prijavljen!')}
+ }catch(err){errBox.textContent=err?.message||'Prijava nije uspela.'}finally{btn.disabled=false;btn.textContent=authMode==='signup'?'Napravi nalog →':'Prijavi se →'}
+}
+async function resetMyPassword(){if(!supa){$('authError').textContent='Poveži Supabase da reset radi.';return}let mail=$('authEmail').value.trim();if(!mail){$('authError').textContent='Prvo unesi email.';return}const {error}=await supa.auth.resetPasswordForEmail(mail,{redirectTo:location.href.split('#')[0]});$('authError').textContent=error?error.message:'Ako nalog postoji, poslat je email za reset lozinke.'}
+function showRecoveryForm(){
+ $('recoveryPanel').hidden=false;$('authForm').hidden=true;$('forgotButton').hidden=true;
+ document.querySelector('.auth-switch').hidden=true;$('authTitle').textContent='Promeni lozinku';
+ $('authEyebrow').textContent='OPORAVAK NALOGA';$('authError').textContent='Unesi novu lozinku da završiš reset.';setGate(true)
+}
+async function saveNewPassword(){
+ const pwd=$('newPassword').value;
+ if(pwd.length<8||pwd!==$('repeatNewPassword').value){$('authError').textContent='Lozinka mora imati najmanje 8 karaktera i oba unosa moraju biti ista.';return}
+ if(!supa){$('authError').textContent='Veza sa sistemom naloga nije dostupna.';return}
+ const {error}=await supa.auth.updateUser({password:pwd});
+ if(error){$('authError').textContent=error.message;return}
+ $('recoveryPanel').hidden=true;$('authForm').hidden=false;document.querySelector('.auth-switch').hidden=false;
+ await supa.auth.signOut();signedInUser=null;showAuthMode('signin');setGate(true);
+ $('authError').textContent='Lozinka je promenjena. Prijavi se sa novom lozinkom.'
+}
+async function logoutUser(){if(isDemo){isDemo=false;setGate(true);renderAccountStatus();go('home');return}if(supa){await supa.auth.signOut();signedInUser=null;setGate(true);renderAccountStatus()}}
+const reviewDate=iso=>{try{return new Date(iso).toLocaleDateString('sr-RS',{day:'numeric',month:'short',year:'numeric'})}catch{return ''}};
+function paintReviews(rows){
+ const el=$('reviewList');if(!el)return;el.textContent='';
+ if(!rows?.length){const p=document.createElement('p');p.className='note';p.textContent='Još nema objavljenih utisaka. Budi prvi!';el.appendChild(p);return}
+ rows.forEach(r=>{
+  const box=document.createElement('article');box.className='review-item';const head=document.createElement('div');head.className='review-item-head';const name=document.createElement('strong');name.textContent=(r.nickname||'Korisnik').slice(0,35);const stars=document.createElement('span');stars.className='stars';stars.textContent='★'.repeat(Number(r.rating)||0)+'☆'.repeat(5-(Number(r.rating)||0));head.append(name,stars);
+  const body=document.createElement('p');body.textContent=String(r.message||'');const meta=document.createElement('small');meta.textContent=r.created_at?reviewDate(r.created_at):'Demo';box.append(head,body,meta);
+  if(r.approved===false){const flag=document.createElement('div');flag.className='review-pending';flag.textContent='Čeka proveru pre javne objave';box.appendChild(flag)}
+  el.appendChild(box)
+ });
+}
+async function refreshReviews(){
+ const note=$('reviewModeNote');if(!note)return;
+ if(!supa||!signedInUser){note.textContent='Demo režim: komentari ostaju na ovom uređaju. Posle povezivanja baze korisnici će moći da šalju javne utiske.';const rows=readStore('alatko_demo_reviews',[]);paintReviews(rows);$('reviewSummary').textContent='Demo prikaz — ove komentare drugi posetioci ne vide.';return}
+ note.textContent='Utisci se šalju na proveru pre javne objave. Svaki nalog može da napiše ili izmeni svoj utisak.';
+ try{const {data,error}=await supa.from('site_feedback').select('nickname,rating,message,approved,created_at,user_id').order('created_at',{ascending:false}).limit(50);if(error)throw error;paintReviews(data||[]);$('reviewSummary').textContent='Objavljeni utisci drugih posetilaca i tvoji utisci koji čekaju proveru.'}
+ catch(err){paintReviews([]);$('reviewSummary').textContent='Utisci trenutno nisu dostupni. Proveri da li je baza podešena.'}
+}
+async function submitReview(event){event.preventDefault();if(submittingReview)return;const nickname=$('reviewName').value.trim(),message=$('reviewMessage').value.trim(),rating=Number($('reviewRating').value);
+ if(nickname.length<2||message.length<10||message.length>600||rating<1||rating>5){toast('Unesi nadimak, ocenu i komentar od 10 do 600 karaktera');return}
+ const row={nickname,rating,message,approved:false,created_at:new Date().toISOString()};submittingReview=true;$('reviewSubmit').disabled=true;
+ try{
+   if(!supa||!signedInUser){const rows=readStore('alatko_demo_reviews',[]);rows.unshift(row);safeStore('alatko_demo_reviews',rows.slice(0,20));toast('Utisak je sačuvan samo u demo verziji!')}
+   else{const {error}=await supa.from('site_feedback').upsert({user_id:signedInUser.id,nickname,rating,message,approved:false},{onConflict:'user_id'});if(error)throw error;toast('Utisak je poslat na proveru!')}
+   $('reviewMessage').value='';await refreshReviews();
+ }catch(err){toast('Nije uspelo slanje. Proveri bazu ili pokušaj kasnije.')}finally{submittingReview=false;$('reviewSubmit').disabled=false}
+}
+setupAuth();
+</script>
+</body>
+</html>
